@@ -1,3 +1,5 @@
+PS1='%n@%m %~$ '
+
 alias n="nvim"
 alias v="vim"
 alias gs="git status"
@@ -5,7 +7,7 @@ alias gl="git pull"
 alias gp="git push"
 alias gc="git commit"
 alias venv="source .venv/bin/activate"
-alias szc="source $zc"
+alias szc="source $HOME/.zshrc"
 
 export c="$HOME/.config"
 export nc="$HOME/.config/nvim"
