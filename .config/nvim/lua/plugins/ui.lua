@@ -2,54 +2,79 @@
 return {
   ---------------------------------------------------------------------------
   -- 1 · Sync kitty (load FIRST, then poke once)
+  -- This plugin helps sync Neovim's background with the terminal's.
+  -- Ensure your terminal emulator (e.g., Kitty) is also configured for true transparency.
   ---------------------------------------------------------------------------
   {
     "typicode/bg.nvim",
-    lazy = false,          -- load during startup
-    priority = 1000,       -- load before anything UI‑related
+    lazy = false,        -- load during startup
+    priority = 1000,     -- load before anything UI-related
   },
-
 
   ---------------------------------------------------------------------------
   -- 2 · Strip Neovim’s own backgrounds
+  -- This plugin sets highlight group backgrounds to NONE, making Neovim's UI transparent.
   ---------------------------------------------------------------------------
   {
     "xiyaowong/transparent.nvim",
     lazy = false,
     priority = 900,
     opts = {
+      -- These are highlight groups that transparent.nvim should explicitly make transparent.
+      -- 'Normal' is usually handled by default, but it's good to ensure others are.
       extra_groups = {
-        "NormalFloat", "NormalNC", "SignColumn",
-        "TelescopeNormal", "NeoTreeNormal",
+        -- "NormalFloat",     -- Floating windows (e.g., LSP hover, diagnostics)
+        -- "NormalNC",        -- Non-current window normal background
+        -- "SignColumn",      -- Git signs, diagnostic signs column
+        -- "TelescopeNormal", -- Telescope popup background
+        -- "Pmenu",           -- Popup menu background (e.g., auto-completion)
+        -- "PmenuSel",        -- Popup menu selected item background
+        -- "PmenuSbar",       -- Popup menu scrollbar
+        -- "PmenuThumb",      -- Popup menu scrollbar thumb
+        -- "MsgArea",         -- Message area at the bottom
+        -- "CmdLine",         -- Command line input area
+        -- "FloatBorder",     -- Border of floating windows
+
+        -- Add any other highlight groups here if you notice they still have a background.
+        -- For example: "NeoTreeNormal" if you use Neo-tree and want it transparent.
       },
+      -- 'groups' can be used to explicitly define groups to clear.
+      -- Leaving it empty means transparent.nvim uses its default list which includes 'Normal'.
+      groups = {},
     },
+    -- The 'config' function is called when the plugin loads.
+    -- transparent.nvim automatically sets up an autocmd to apply transparency
+    -- whenever a new ColorScheme is loaded, which is ideal here.
+    config = function(_, opts)
+      require("transparent").setup(opts)
+    end,
   },
 
   ---------------------------------------------------------------------------
-  -- 3 · Themery (loads AFTER the two above)
+  -- 3 · Themery for colorscheme management and automatic application on startup
   ---------------------------------------------------------------------------
   {
     "zaldih/themery.nvim",
     lazy = false,
-    dependencies = { "typicode/bg.nvim", "xiyaowong/transparent.nvim" },
+    priority = 800,
     config = function()
       require("themery").setup({
         themes = {
           {
-            name="ayu",
-            colorscheme="ayu"
+            name = "ayu",
+            colorscheme = "ayu",
           },
           {
-            name="tender",
-            colorscheme="tender"
+            name = "tender",
+            colorscheme = "tender"
           },
           {
-            name="abstract",
-            colorscheme="abscs",
+            name = "abstract",
+            colorscheme = "abscs",
           },
           {
-            name="monochrome",
-            colorscheme="true-monochrome",
+            name = "monochrome",
+            colorscheme = "true-monochrome",
             before = [[
             vim.opt.background = "dark"
             vim.api.nvim_create_autocmd("ColorScheme", {
@@ -58,104 +83,87 @@ return {
                 vim.api.nvim_set_hl(0, "CursorLine", { bg = "#303030", ctermbg = 236 })
               end
             })
-          ]]
+            ]]
           },
           {
-            name="deep white",
-            colorscheme="deepwhite"
+            name = "deep white",
+            colorscheme = "deepwhite"
           },
           {
-            name="petra",
-            colorscheme="petra"
+            name = "petra",
+            colorscheme = "petra"
           },
           {
-            name="rose pine",
-            colorscheme="rose-pine"
+            name = "rose pine",
+            colorscheme = "rose-pine"
           },
           {
-            name="rose pine moon",
-            colorscheme="rose-pine-moon"
+            name = "rose pine moon",
+            colorscheme = "rose-pine-moon"
           },
           {
-            name="sunset cloud",
-            colorscheme="sunset_cloud",
+            name = "sunset cloud",
+            colorscheme = "sunset_cloud",
           },
           {
-            name="radioactive waste",
-            colorscheme="radioactive_waste"
+            name = "radioactive waste",
+            colorscheme = "radioactive_waste"
           },
           {
-            name="forest_stream",
-            colorscheme="forest_stream"
+            name = "forest_stream",
+            colorscheme = "forest_stream"
           },
           {
-            name="crimson moonlight",
-            colorscheme="crimson_moonlight"
+            name = "crimson moonlight",
+            colorscheme = "crimson_moonlight"
           },
           {
             name = "melange",
             colorscheme = "melange",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "mocha blue",
             colorscheme = "catppuccin-mocha",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "ashen",
             colorscheme = "ashen",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "citrus",
             colorscheme = "citruszest",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
-          -- {
-          --   name = "jellybeans",
-          --   colorscheme = "jellybeans",
-          --   before = [[
-          --     vim.opt.background = "dark"
-          --   ]]
-          -- },
           {
             name = "mellifluous.nvim",
             colorscheme = "mellifluous",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "posterpole",
             colorscheme = "posterpole",
             before = [[
-              vim.opt.background = "dark"
-            ]]
-          },
-          {
-            name = "posterterm",
-            colorscheme = "posterpole-term",
-            before = [[
-              vim.opt.background = "dark"
-              require("notify").setup({
-                background_colour = "#000000",
-              })
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "rakis",
             colorscheme = "rakis",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
@@ -186,7 +194,7 @@ return {
             name = "gruvbox material",
             colorscheme = "gruvbox-material",
             before = [[
-              vim.g.gruvbox_material_enable_italic = true
+            vim.g.gruvbox_material_enable_italic = true
             ]]
           },
           {
@@ -197,7 +205,7 @@ return {
             name = "oxocarbon",
             colorscheme = "oxocarbon",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
@@ -208,78 +216,78 @@ return {
             name = "everforest",
             colorscheme = "everforest",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "doom miramare",
             colorscheme = "doom-miramare",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "miasma",
             colorscheme = "miasma",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "chocolatier",
             colorscheme = "chocolatier",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "coffee",
             colorscheme = "coffee",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "espresso",
             colorscheme = "espresso",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "doom palenight",
             colorscheme = "doom-palenight",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "doom monokai flatland",
             colorscheme = "doom-monokai-flatland",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "doom fairy floss",
             colorscheme = "doom-fairy-floss",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "doom horizon",
             colorscheme = "doom-horizon",
             before = [[
-              vim.opt.background = "dark"
+            vim.opt.background = "dark"
             ]]
           },
           {
             name = "doom challenger deep",
             colorscheme = "doom-challenger-deep",
             before = [[
-              vim.opt.background = "dark"
-            ]],
+            vim.opt.background = "dark"
+            ]]
           },
           {
             name = "kanagawa paper",
@@ -301,19 +309,18 @@ return {
             name = "rakis light",
             colorscheme = "rakis",
             before = [[
-              vim.opt.background = "light"
+            vim.opt.background = "light"
             ]]
           },
           {
-            name="zenbones",
-            colorscheme="zenbones",
-              before = [[
-              vim.opt.background = "light"
+            name = "zenbones",
+            colorscheme = "zenbones",
+            before = [[
+            vim.opt.background = "light"
             ]]
           },
         }
       })
-    end,
+    end
   },
 }
-
