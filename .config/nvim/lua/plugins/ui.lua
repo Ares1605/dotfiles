@@ -24,7 +24,7 @@ return {
       -- 'Normal' is usually handled by default, but it's good to ensure others are.
       extra_groups = {
         -- "NormalFloat",     -- Floating windows (e.g., LSP hover, diagnostics)
-        -- "NormalNC",        -- Non-current window normal background
+        "NormalNC",        -- Non-current window normal background
         -- "SignColumn",      -- Git signs, diagnostic signs column
         -- "TelescopeNormal", -- Telescope popup background
         -- "Pmenu",           -- Popup menu background (e.g., auto-completion)
