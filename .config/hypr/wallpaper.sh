@@ -26,7 +26,9 @@ main() {
         echo "rgba($r,$g,$b,1)"
     }
 
-    active_rgba=$(hex_to_rgba "$color2")
+    inactive_rgba=$(hex_to_rgba "$color0")
+    active_rgba=$(hex_to_rgba "$color15")
+    sed -i "s/col\.inactive_border = .*/col.inactive_border = $inactive_rgba/" ~/.config/hypr/wallpaper-hyprland-custom.conf
     sed -i "s/col\.active_border = .*/col.active_border = $active_rgba/" ~/.config/hypr/wallpaper-hyprland-custom.conf
 }
 main
