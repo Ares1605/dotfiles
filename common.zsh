@@ -16,5 +16,5 @@ export zc="$HOME/.zshrc"
 export dc="$HOME/.dotfiles/"
 
 # add github agent
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/github_key
+eval "$(ssh-agent -s)" > /dev/null
+ssh-add ~/.ssh/github_key 2>/dev/null
