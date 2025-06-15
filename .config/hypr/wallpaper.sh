@@ -11,14 +11,23 @@ main() {
     wal -i "$selected_wallpaper" -n
     swaync-client --reload-css
     cat ~/.cache/wal/colors-kitty.conf > ~/.config/kitty/current-theme.conf
-    pywalfox update
-    color1=$(awk 'match($0, /color2=\47(.*)\47/,a) { print a[1] }' ~/.cache/wal/colors.sh)
-    color2=$(awk 'match($0, /color3=\47(.*)\47/,a) { print a[1] }' ~/.cache/wal/colors.sh)
-    cava_config="$HOME/.config/cava/config"
-    sed -i "s/^gradient_color_1 = .*/gradient_color_1 = '$color1'/" $cava_config
-    sed -i "s/^gradient_color_2 = .*/gradient_color_2 = '$color2'/" $cava_config
-    pkill -USR2 cava 2>/dev/null
+    # pywalfox update
+    # cava_config="$HOME/.config/cava/config"
+    # pkill -USR2 cava 2>/dev/null
     source ~/.cache/wal/colors.sh
+
+    # manipulate the wallpaper-hyprland-custom.conf file
+    # to change specific hyprland properties
+    hex_to_rgba() {
+        hex=${1#"#"}
+        r=$((16#${hex:0:2}))
+        g=$((16#${hex:2:2}))
+        b=$((16#${hex:4:2}))
+        echo "rgba($r,$g,$b,1)"
+    }
+
+    active_rgba=$(hex_to_rgba "$color2")
+    sed -i "s/col\.active_border = .*/col.active_border = $active_rgba/" wallpaper-hyprland-custom.conf
 }
 main
 
