@@ -11,7 +11,7 @@ main() {
     wal -i "$selected_wallpaper" -n
     swaync-client --reload-css
     cat ~/.cache/wal/colors-kitty.conf > ~/.config/kitty/current-theme.conf
-    # pywalfox update
+    pywalfox update
     # cava_config="$HOME/.config/cava/config"
     # pkill -USR2 cava 2>/dev/null
     source ~/.cache/wal/colors.sh
