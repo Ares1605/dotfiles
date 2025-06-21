@@ -77,3 +77,8 @@ vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<CR>")', {
 })
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-n>:q<CR>', {noremap = true, silent = true})
+
+vim.cmd "colorscheme lushwal"
+require("lushwal").add_reload_hook {
+  vim.cmd "LushwalCompile",
+}

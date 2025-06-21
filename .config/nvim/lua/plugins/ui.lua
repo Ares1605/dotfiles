@@ -54,7 +54,7 @@ return {
   -- 3 · Themery for colorscheme management and automatic application on startup
   ---------------------------------------------------------------------------
   {
-    "zaldih/themery.nvim",
+    "Ares1605/themery.nvim",
     lazy = false,
     priority = 800,
     config = function()
@@ -323,4 +323,14 @@ return {
       })
     end
   },
+  {
+	  "oncomouse/lushwal.nvim",
+	  cmd = { "LushwalCompile" },
+	  dependencies = {
+		  { "rktjmp/lush.nvim" },
+		  { "rktjmp/shipwright.nvim" },
+	  },
+	  lazy = false,
+	  priority = 700
+  }
 }
