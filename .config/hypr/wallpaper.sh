@@ -9,9 +9,20 @@ main() {
     pkill -f "wofi -c /home/ares/.config/wofi/wallpaper -s /home/ares/.config/wofi/style-wallpaper.css --show dmenu --prompt Select Wallpaper: -n"
     choice=$(menu | wofi -c ~/.config/wofi/wallpaper -s ~/.config/wofi/style-wallpaper.css --show dmenu --prompt "Select Wallpaper:" -n)
 
+    # kill the old process first
+    pkill -f "wofi -c /home/ares/.config/wofi/wallpaper -s /home/ares/.config/wofi/style-wallpaper.css --show dmenu --prompt Select Wallpaper: -n"
+    backends="colorthief
+wal
+modern_colorthief
+colorz
+okthief
+fast_colorthief
+haishoku"
+    backend=$(echo "$backends" | wofi --lines=7 --show dmenu --prompt "Select Backend:" -n)
+
     selected_wallpaper=$(echo "$choice" | sed 's/^img://')
     swww img "$selected_wallpaper" --transition-type any --transition-fps 60 --transition-duration .5
-    wal -i "$selected_wallpaper" -n
+    wal --backend $backend -i "$selected_wallpaper" -n
     # swaync-client --reload-css
     cat ~/.cache/wal/colors-kitty.conf > ~/.config/kitty/current-theme.conf
     pywalfox update
