@@ -2,7 +2,7 @@
 WALLPAPER_DIR="$HOME/Pictures/wallpapers"
 #I dont know what the fuck I am doing
 menu() {
-   find "${WALLPAPER_DIR}" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) | awk '{print "img:"$0}'
+   find "${WALLPAPER_DIR}" -type f \( -iname "*.webp" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) | awk '{print "img:"$0}'
 }
 main() {
    # kill the old process first
