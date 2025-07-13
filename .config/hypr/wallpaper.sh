@@ -6,16 +6,16 @@ menu() {
 }
 main() {
    # kill the old process first
-   pkill -f "wofi -c /home/ares/.config/wofi/wallpaper -s /home/ares/.config/wofi/style-wallpaper.css --show dmenu --prompt Select Wallpaper: -n"
-   choice=$(menu | wofi -c ~/.config/wofi/wallpaper -s ~/.config/wofi/style-wallpaper.css --show dmenu --prompt "Select Wallpaper:" -n)
+   pkill -f "wofi -c /home/ares/.config/wofi/wallpaper -s /home/ares/.config/wofi/style-wallpaper.css --prompt Select Wallpaper: -n"
+   choice=$(menu | wofi -c ~/.config/wofi/wallpaper -s ~/.config/wofi/style-wallpaper.css --prompt "Select Wallpaper:" -n)
    
    # Exit if no wallpaper selected
    [[ -z "$choice" ]] && exit 0
    
    # kill the old process first
-   pkill -f "wofi -c /home/ares/.config/wofi/wallpaper -s /home/ares/.config/wofi/style-wallpaper.css --show dmenu --prompt Select Wallpaper: -n"
-   backends="colorthief
-wal
+   pkill -f "wofi -c /home/ares/.config/wofi/wallpaper -s /home/ares/.config/wofi/style-wallpaper.css --prompt Select Wallpaper: -n"
+   backends="wal
+colorthief
 modern_colorthief
 colorz
 okthief

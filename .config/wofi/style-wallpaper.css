@@ -43,8 +43,8 @@ window {
     outline: none;
     color: @text;
     box-shadow: 1px 1px 5px rgba(0,0,0, .5);
-    border-radius:10px;
-    background-color: alpha(@background,.2);
+    border-radius:10;
+    background-color: alpha(@cursor,.2);
 }
 #input image {
     border: none;
@@ -71,11 +71,6 @@ window {
 #entry {
     all:unset;
     padding: 20 0 20 45;
-}
-#entry arrow {
-    border: none;
-    color: @lavender;
-
 }
 #entry:selected {
     border: none;
