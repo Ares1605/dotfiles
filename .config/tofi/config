@@ -1,6 +1,7 @@
 font = Fanwood Text
 font-size = 18
 
+corner-radius = 8
 width = 50%
 height = 50%
 anchor = center
