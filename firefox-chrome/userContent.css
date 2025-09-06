@@ -1,0 +1,18 @@
+/* edited by ares for firefox transparency */
+@-moz-document url-prefix(about:home), url-prefix(about:newtab), url("about:home"), url("about:newtab"), url("about:blank") {
+  
+  /* * Target the body AND its ::before pseudo-element
+   */
+  body,
+  body::before {
+    background: rgba(50, 50, 50, 0.2) !important;
+  }
+
+  /* * Override the internal variables Firefox uses for these pages
+   */
+  :root {
+    --newtab-background-color: rgba(50, 50, 50, 0.2) !important;
+    --newtab-background-color-secondary: rgba(50, 50, 50, 0.7) !important;
+    --newtab-text-primary-color: #FFFFFF !important; /* Make text readable against dark wallpaper */
+  }
+}

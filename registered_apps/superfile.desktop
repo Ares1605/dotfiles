@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=File Explorer
+GenericName=Terminal File Manager
+Comment=SuperFile TUI in kitty
+Exec=hyprctl dispatch exec "[float;size 1000 650;center] kitty --class "SuperFile" -e /usr/bin/env spf"
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility;FileManager;
+StartupNotify=false
+Keywords=spf;SuperFile;

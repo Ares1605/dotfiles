@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Bitwarden TUI
+GenericName=Password Manager
+Comment=A secure and free TUI password manager for all of your devices.
+# Use sh -c to correctly interpret the pipe '|'
+Exec=sh -c 'rbw-menu password | wl-copy'
+Terminal=false
+MimeType=x-scheme-handler/bitwarden
+Type=Application
+Icon=bitwarden
+Categories=Utility;
+StartupWMClass=Bitwarden

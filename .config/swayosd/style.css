@@ -1,0 +1,29 @@
+window#osd {
+  border-radius: 11px;
+  border: none;
+}
+#container {
+  margin: 10px;
+}
+
+progressbar:disabled,
+image:disabled {
+  opacity: 0.5;
+}
+
+progressbar {
+  min-height: 6px;
+  border-radius: 2px;
+  background: transparent;
+  border: none;
+}
+trough {
+  min-height: inherit;
+  border-radius: 2px;
+  border: none;
+}
+progress {
+  min-height: inherit;
+  border-radius: 2px;
+  border: none;
+}
