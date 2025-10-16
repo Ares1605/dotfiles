@@ -1,18 +1,44 @@
-/* edited by ares for firefox transparency */
-@-moz-document url-prefix(about:home), url-prefix(about:newtab), url("about:home"), url("about:newtab"), url("about:blank") {
-  
-  /* * Target the body AND its ::before pseudo-element
-   */
-  body,
-  body::before {
-    background: rgba(50, 50, 50, 0.2) !important;
+/*
+ * userContent.css - Page content styling
+ */
+
+/* Give ALL pages a default background (so they're not transparent) */
+@-moz-document regexp(".*") {
+  html, body {
+    background-color: #1e1e1e !important;
+  }
+}
+
+/* Make ONLY Firefox home/new tab page transparent */
+@-moz-document url("about:home"), url("about:newtab") {
+  :root {
+    --newtab-background-color: transparent !important;
+    --newtab-background-color-secondary: transparent !important;
   }
 
-  /* * Override the internal variables Firefox uses for these pages
-   */
-  :root {
-    --newtab-background-color: rgba(50, 50, 50, 0.2) !important;
-    --newtab-background-color-secondary: rgba(50, 50, 50, 0.7) !important;
-    --newtab-text-primary-color: #FFFFFF !important; /* Make text readable against dark wallpaper */
+  html, body {
+    background-color: transparent !important;
+    background-image: none !important;
+    background: transparent !important;
+  }
+
+  /* All wrapper divs transparent */
+  body > * {
+    background-color: transparent !important;
+  }
+
+  /* Make search box semi-transparent for visibility */
+  .search-wrapper,
+  .search-handoff-button {
+    background-color: rgba(50, 50, 50, 0.6) !important;
+  }
+
+  /* Make top sites semi-transparent */
+  .top-sites-list {
+    background-color: transparent !important;
+  }
+
+  .top-site-outer .tile {
+    background-color: rgba(50, 50, 50, 0.5) !important;
   }
 }

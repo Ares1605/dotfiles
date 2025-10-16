@@ -547,22 +547,16 @@ toolbarbutton[part="scrollbutton-down"] {
 
 /* ---- START: TRANSPARENCY RULES ---- */
 
-/* Set main window background to transparent */
+/* Set toolbar background to transparent */
 :root {
   --lwt-accent-color: transparent !important;
   --toolbar-bgcolor: transparent !important;
   --lwt-selected-tab-background-color: rgba(50, 50, 50, 0.55) !important;
 }
 
-/* Make the main browser window transparent */
-#main-window, #browser {
-  background-color: rgba(50, 50, 50, 0.2) !important;
-}
-
 /* Remove background from toolbars */
 #navigator-toolbox, #nav-bar, #TabsToolbar {
   background-image: none !important;
-  background-color: transparent !important;
   background-color: rgba(50, 50, 50, 0.2) !important;
   box-shadow: none !important;
 }
@@ -572,7 +566,7 @@ toolbarbutton[part="scrollbutton-down"] {
   background-color: rgba(50, 50, 50, 0.55) !important;
 }
 
-/* Semi-transparent background for inactive tabs */
+/* Semi-transparent background for tabs */
 .tabbrowser-tab:not([selected="true"]) .tab-background {
     background-color: rgba(30, 30, 30, 0.2) !important;
     opacity: 0.8 !important;
@@ -581,9 +575,15 @@ toolbarbutton[part="scrollbutton-down"] {
     background-color: rgba(30, 30, 30, 0.5) !important;
     opacity: 0.8 !important;
 }
-:root {
-  --tabpanel-background-color: transparent !important;
-  background: transparent !important;
+
+/* Make browser content area transparent - this allows wallpaper to show through */
+#tabbrowser-tabpanels {
+  background-color: transparent !important;
+}
+
+browser[type="content-primary"],
+browser[type="content"] {
+  background-color: transparent !important;
 }
 
 /* ---- END: TRANSPARENCY RULES ---- */
