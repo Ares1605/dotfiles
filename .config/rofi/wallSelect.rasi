@@ -1,0 +1,91 @@
+@import "config.rasi"
+// // # z0mbi3 -  https://github.com/gh0stzk/dotfiles
+//
+configuration {
+    modi:                        "drun";
+    show-icons:                  true;
+    drun-display-format:         "{name}";
+    font:                        "JetBrainsMono NF Bold 11";
+    
+    //hover-select:				 true;
+	//me-select-entry:			 "";
+	//me-accept-entry:			 "MousePrimary";
+}
+//
+// //----- Global Properties -----//
+//
+* {
+main-bg: #282828E6;
+main-fg: #fbf1c7;
+select-bg: #d79921;
+select-fg: #282828;
+}
+//
+// //----- Main Window -----//
+//
+window {
+    enabled:                     true;
+    fullscreen:                  false;
+    width:                       60%;
+    // transparency:                "real";
+    // cursor:                      "default";
+    // spacing:                     0px;
+    // padding:                     0px;
+    // border:                      0px;
+    // border-radius:               0px;
+    // border-color:                transparent;
+    // background-color:            transparent;
+}
+
+//----- Main Box -----//
+
+// mainbox {
+//     enabled:                     true;
+//     children:                    [ "listview" ];
+//     background-color:            @main-bg;
+// }
+//
+// //----- Listview -----//
+//
+listview {
+    enabled:                     true;
+    columns:                     4;
+    lines:                       3;
+    spacing:                     50px;
+    padding:                     20px 30px;
+    cycle:                       true;
+    dynamic:                     false;
+    scrollbar:                   false;
+    layout:                      vertical;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+//
+// //----- Elements -----//
+//
+element {
+    enabled:                     true;
+    orientation:                 horizontal;
+    spacing:                     0px;
+    padding:                     0px;
+    border-radius:               4px;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+
+@media(max-aspect-ratio: 1.8) {
+    element {
+        orientation:             vertical;
+    }
+}
+element-icon {
+    size:                        20%;
+    cursor:                      inherit;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  inherit;
+}

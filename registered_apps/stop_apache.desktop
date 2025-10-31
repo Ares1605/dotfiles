@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Stop Apache
+Comment=Stop Apache2.0 server
+Exec=sudo /opt/lampp/lampp stopapache
+Icon=kitty
+Terminal=false
+Categories=Utility;
+StartupNotify=false

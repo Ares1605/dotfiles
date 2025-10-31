@@ -1,0 +1,4 @@
+general {
+ col.active_border = rgba(192,194,194,1)
+ col.inactive_border = rgba(5,13,13,1)
+}

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Internet Speed Test
+GenericName=Internet Speed Test
+Comment=Internet Speed Test TUI in kitty
+Exec=/home/ares/.scripts/internet-speed-test-launcher.sh
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility;
+StartupNotify=false
+Keywords=internet;speed test

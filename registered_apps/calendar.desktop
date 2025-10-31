@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Calendar
+GenericName=Calendar
+Comment=Calendar TUI in kitty
+Exec=hyprctl dispatch exec "[float;size 750 500;top] kitty --class calcure -e calcure"
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility;
+StartupNotify=false
+Keywords=cal;calendar;calcure

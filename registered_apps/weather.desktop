@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Weather
+Comment=Weather TUI in kitty
+Exec=/home/ares/.scripts/weather-launcher.sh
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility;
+StartupNotify=false
+Keywords=weather

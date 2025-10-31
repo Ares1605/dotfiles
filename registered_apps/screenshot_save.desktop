@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot (Save)
+GenericName=Screenshot Utility
+Comment=Hyprshot screenshot to disk
+Exec=hyprshot --mode region --output-folder /home/ares/Pictures/screenshots/ --freeze
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility
+StartupNotify=false
+Keywords=screenshot;ss;save

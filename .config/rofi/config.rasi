@@ -1,0 +1,55 @@
+/* ROFI SQUARED THEME USING THE NORD PALETTE  */
+/* Author: Newman Sanchez (https://github.com/newmanls) */
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    font:   "FiraCode Nerd Font Medium 12";
+    background-color: transparent;
+
+    margin:     0;
+    padding:    0;
+    spacing:    0;
+
+    window-background: argb:33000000;
+}
+
+window {
+    location:   center;
+    width:      480;
+    border-radius: 4px;
+}
+
+inputbar {
+    spacing:    8px;
+    padding:    8px;
+}
+
+prompt, entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+listview {
+    padding:    4px 0;
+    lines:      8;
+    columns:    1;
+
+    fixed-height:   false;
+}
+
+element {
+    padding:    8px;
+    spacing:    8px;
+    border-radius: 4px;
+}
+
+element-icon {
+    size:   0.8em;
+}
+
+element-text {
+    text-color: inherit;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: transparent;
+}

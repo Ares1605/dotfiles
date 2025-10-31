@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Bottom
+GenericName=Task Manager
+Comment=Bottom TUI in kitty
+Exec=hyprctl dispatch exec "[float;size 800 550;center] kitty --class "btm" -e /usr/bin/env btm"
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility;
+StartupNotify=false
+Keywords=btm;bottom;

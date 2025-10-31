@@ -4,8 +4,9 @@
 
 /* Give ALL pages a default background (so they're not transparent) */
 @-moz-document regexp(".*") {
-  html, body {
-    background-color: #1e1e1e !important;
+  html {
+    background-color: rgba(245, 245, 245, 0.85);
+    backdrop-filter: blur(12px);
   }
 }
 
@@ -25,12 +26,6 @@
   /* All wrapper divs transparent */
   body > * {
     background-color: transparent !important;
-  }
-
-  /* Make search box semi-transparent for visibility */
-  .search-wrapper,
-  .search-handoff-button {
-    background-color: rgba(50, 50, 50, 0.6) !important;
   }
 
   /* Make top sites semi-transparent */

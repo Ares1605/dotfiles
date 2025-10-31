@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Wifi
+GenericName=Wifi Manager
+Comment=Wifi TUI in kitty
+Exec=hyprctl dispatch exec "[float;size 400 400;center] kitty --class "nmtui" -e /usr/bin/env nmtui"
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility;
+StartupNotify=false
+Keywords=nmtui;wifi;

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot (Copy)
+GenericName=Screenshot Utility
+Comment=Hyprshot screenshot to clipboard
+Exec=hyprshot --mode region --clipboard-only --freeze
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility
+StartupNotify=false
+Keywords=screenshot;ss;copy
