@@ -55,9 +55,6 @@ update_hyprland_colors() {
     local inactive_rgba=$(hex_to_rgba "$color0")
     local active_rgba=$(hex_to_rgba "$color15")
 
-    # Create backup before modifying
-    cp "$config_file" "$config_file.bak"
-
     sed -i "s/col\.inactive_border = .*/col.inactive_border = $inactive_rgba/" "$config_file"
     sed -i "s/col\.active_border = .*/col.active_border = $active_rgba/" "$config_file"
 }
