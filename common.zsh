@@ -31,6 +31,7 @@ alias sv="source .venv/bin/activate"
 alias nf="neofetch"
 alias hr="hyprctl reload"
 alias h="Hyprland"
+alias fn="cd ~/Documents/notes/ && nvim ./ && cd -"
 
 alias i="sudo pacman -S"
 alias is="pacman -Ss"
