@@ -1,2 +1,5 @@
 .config/kitty/current-theme.conf
 .config/hypr/wallpaper-hyprland-custom.conf
+
+# wego config contains API keys
+.wegorc

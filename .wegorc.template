@@ -1,5 +1,5 @@
 # wego configuration
-# 
+#
 # This config has https://github.com/schachmat/ingo syntax.
 # Empty lines or lines starting with # will be ignored.
 # All other lines must look like "KEY=VALUE" (without the quotes).
@@ -39,7 +39,8 @@ location=Chicago
 md-coords=false
 
 # openweathermap backend: the api KEY to use (default )
-owm-api-key=dc848f9ed4fec3a43cbed55d79466dbe
+# IMPORTANT: Copy this file to .wegorc and add your actual API key below
+owm-api-key=YOUR_API_KEY_HERE
 
 # openweathermap backend: print raw requests and responses (default false)
 owm-debug=false
