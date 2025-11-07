@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Update package lists for explicitly installed packages
 
@@ -14,3 +14,4 @@ pacman -Qen | awk '{print $1}' > "$DOTFILES_DIR/pkglist_repo.txt"
 echo "Package lists updated:"
 echo "  - pkglist_aur.txt: $(wc -l < "$DOTFILES_DIR/pkglist_aur.txt") packages"
 echo "  - pkglist_repo.txt: $(wc -l < "$DOTFILES_DIR/pkglist_repo.txt") packages"
+

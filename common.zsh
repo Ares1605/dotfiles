@@ -1,3 +1,5 @@
+export DOTFILES_DIR="$HOME/.dotfiles"
+
 lazy_load() {
     local cmd="$1"
     local init_cmd="$2"
@@ -51,7 +53,7 @@ export c="$HOME/.config"
 export nc="$HOME/.config/nvim"
 export kc="$HOME/.config/kitty"
 export zc="$HOME/.zshrc"
-export dc="$HOME/.dotfiles/"
+export dc=$DOTFILES_DIR
 
 # A less option my mycli, to disable line wrapping
 #  More information: https://www.mycli.net/pager (Look at "Page Behavior" section)
@@ -61,3 +63,11 @@ export LESS="-SRXF"
 eval "$(ssh-agent -s)" > /dev/null; ssh-add ~/.ssh/github_key 2>/dev/null
 
 eval "$(starship init zsh)"
+
+# ===== Dependency Tracking =====
+# Sync all dependencies
+alias sync-all="$DOTFILES_DIR/setup-scripts/sync-installed.sh"
+# Or sync individually
+alias sync-npm="$DOTFILES_DIR/setup-scripts/sync-npm.sh"
+alias sync-pip="$DOTFILES_DIR/setup-scripts/sync-pip.sh"
+alias sync-go="$DOTFILES_DIR/setup-scripts/sync-go.sh"
