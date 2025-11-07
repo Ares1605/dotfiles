@@ -1,0 +1,5 @@
+[[database]]
+Name = 'company_1'
+Provider = 'mysql'
+DBName = 'company_1
+URL = 'mysql://dev_ares:g^!d%4YNLnt*vz42@localhost:3307/company_1'

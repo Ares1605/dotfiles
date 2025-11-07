@@ -1,4 +1,6 @@
 @import "config.rasi"
+@import "templates/standard-nav.rasi"
+
 // // # z0mbi3 -  https://github.com/gh0stzk/dotfiles
 //
 configuration {

@@ -1,0 +1,10 @@
+configuration {
+  kb-row-left: "h";
+  kb-row-down: "j,Down";
+  kb-row-up: "k,Up";
+  kb-row-right: "l";
+}
+
+mainbox {
+  children: [listview];
+}

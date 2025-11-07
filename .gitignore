@@ -3,3 +3,5 @@
 
 # wego config contains API keys
 .wegorc
+
+.claude

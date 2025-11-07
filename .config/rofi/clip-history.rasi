@@ -1,0 +1,3 @@
+@import "config.rasi"
+@import "templates/standard-nav.rasi"
+@import "templates/small-text.rasi"

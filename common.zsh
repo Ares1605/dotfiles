@@ -33,16 +33,29 @@ alias hr="hyprctl reload"
 alias h="Hyprland"
 alias fn="cd ~/Documents/notes/ && nvim ./ && cd -"
 
-alias i="sudo pacman -S"
-alias is="pacman -Ss"
+# Powerpill natively supports download parallelization
+#  More Information: https://wiki.archlinux.org/title/Powerpill
+alias powerpill="pacman"
+PACMAN="powerpill"
+
+alias i="sudo $PACMAN -S"
+alias is="$PACMAN -Ss"
 
 alias c="wl-copy"
+alias cat="bat"
+alias ocat="/usr/bin/cat"
+
+alias bios="systemctl reboot --firmware-setup"
 
 export c="$HOME/.config"
 export nc="$HOME/.config/nvim"
 export kc="$HOME/.config/kitty"
 export zc="$HOME/.zshrc"
 export dc="$HOME/.dotfiles/"
+
+# A less option my mycli, to disable line wrapping
+#  More information: https://www.mycli.net/pager (Look at "Page Behavior" section)
+export LESS="-SRXF"
 
 # add github agent
 eval "$(ssh-agent -s)" > /dev/null; ssh-add ~/.ssh/github_key 2>/dev/null
