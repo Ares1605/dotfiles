@@ -36,6 +36,7 @@ dolphin
 dosfstools
 dump_syms
 efibootmgr
+evtest
 eza
 fd
 firefox
@@ -121,7 +122,9 @@ python-pynvim
 qt5ct
 qt6ct
 rbw
+reflector
 rofi
+rsync
 ruby-erb
 sbt
 slurp

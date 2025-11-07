@@ -2,10 +2,12 @@ adwaita-qt5-git
 adwaita-qt6-git
 ascii-image-converter
 aws-session-manager-plugin
+browsh-bin
 colorz
 coursier-bin
 dislocker
 floorp-bin
+gcalcli
 google-chrome
 lazysql-bin
 leafpad
@@ -14,6 +16,7 @@ minecraft-launcher
 mycli
 neofetch
 nodejs-fast-cli
+powerpill
 python-pywal16
 python-pywalfox
 rbw-menu
@@ -24,5 +27,3 @@ tre-command
 wego
 xwaylandvideobridge-git
 yay
-yay-debug
-zoom
