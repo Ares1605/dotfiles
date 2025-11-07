@@ -1,17 +1,28 @@
 #!/bin/bash
-# Sync all currently installed packages to dependencies files
+# update all currently installed packages to dependencies files
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "Syncing all currently installed packages..."
+echo "Updating all currently installed packages..."
 echo ""
 
-# Run individual sync scripts
-"$SCRIPT_DIR/sync-pip.sh"
+# Run individual update scripts
+"$SCRIPT_DIR/update-pip.sh"
 echo ""
-"$SCRIPT_DIR/sync-npm.sh"
+"$SCRIPT_DIR/update-npm.sh"
 echo ""
-"$SCRIPT_DIR/sync-go.sh"
+"$SCRIPT_DIR/update-go.sh"
+echo ""
+"$SCRIPT_DIR/update-pkglist.sh"
+echo ""
 
 echo ""
-echo "✅ All packages synced to ~/.dotfiles/dependencies/"
+echo "✅ All packages updated to ~/.dotfiles/dependencies/"
+
+echo "Updating wallpapers"
+echo ""
+
+"$SCRIPT_DIR/update-wallpapers.sh"
+echo ""
+
+echo "✅ Updated wallpapers~/.dotfiles/wallpapers/"

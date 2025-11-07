@@ -9,7 +9,7 @@ echo ""
 # Install system packages
 if [ -f "$DEPS_DIR/pkglist-repo.txt" ]; then
     echo "Installing pacman packages..."
-    pacman -S --needed $(cat "$DEPS_DIR/pkglist-repo.txt" | tr '\n' ' ')
+    sudo pacman -S --needed $(cat "$DEPS_DIR/pkglist-repo.txt" | tr '\n' ' ')
     echo "✓ Pacman packages installed"
 fi
 
@@ -47,17 +47,6 @@ if [ -f "$DEPS_DIR/go-packages.txt" ] && [ -s "$DEPS_DIR/go-packages.txt" ]; the
         go install "$pkg@latest"
     done < "$DEPS_DIR/go-packages.txt"
     echo "✓ Go binaries installed"
-fi
-
-echo ""
-
-if [ -f "$DEPS_DIR/ruby-gems.txt" ] && [ -s "$DEPS_DIR/ruby-gems.txt" ]; then
-    echo "Installing Ruby gems..."
-    while IFS= read -r gem; do
-        [ -z "$gem" ] && continue
-        gem install "$gem"
-    done < "$DEPS_DIR/ruby-gems.txt"
-    echo "✓ Ruby gems installed"
 fi
 
 echo ""

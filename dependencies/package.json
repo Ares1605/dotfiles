@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "description": "Global npm packages",
   "dependencies": {
-    "@anthropic-ai/claude-code": "*"
-    "@google/gemini-cli": "*"
-    "@openai/codex": "*"
-    "asciify-image": "*"
-    "fast-cli": "*"
-    "image-to-ascii-cli": "*"
-    "neovim": "*"
-    "node-gyp": "*"
-    "nopt": "*"
-    "puppeteer": "*"
-    "semver": "*"
+    "@anthropic-ai/claude-code": "*",
+    "@google/gemini-cli": "*",
+    "@openai/codex": "*",
+    "asciify-image": "*",
+    "fast-cli": "*",
+    "image-to-ascii-cli": "*",
+    "neovim": "*",
+    "node-gyp": "*",
+    "nopt": "*",
+    "puppeteer": "*",
+    "semver": "*",
     "svelte-language-server": "*"
   }
 }
