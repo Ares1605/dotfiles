@@ -60,7 +60,6 @@ echo ""
 
 # Root configuration files
 echo "==> Root configuration files"
-create_symlink "$DOTFILES_DIR/.gitconfig-delta" "$HOME/.gitconfig-delta" ".gitconfig-delta"
 create_symlink "$DOTFILES_DIR/.myclirc" "$HOME/.myclirc" ".myclirc"
 create_symlink "$DOTFILES_DIR/.wegorc" "$HOME/.wegorc" ".wegorc"
 echo ""
