@@ -23,6 +23,7 @@ rbw-menu
 scala
 swayosd-git
 tofi
+toggl-cli-bin
 tre-command
 wego
 xwaylandvideobridge-git

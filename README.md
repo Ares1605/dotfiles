@@ -1,3 +1,6 @@
+## Dependencies
+`zsh`, `pacman`, `yay`
+
 ## Key Event Viewer
 
 Run `wev` in a terminal and press the keys you're interested in to capture the key codes.
@@ -50,3 +53,6 @@ Google Calendar integration is done with `gcalcli`! Here are some favorite comma
 gcalcli agenda
 gcalcli calm
 ```
+
+## ZSH Vi Mode
+These dotfiles utilize the [`zsh-vi-mode`](https://github.com/jeffreytse/zsh-vi-mode) plugin
