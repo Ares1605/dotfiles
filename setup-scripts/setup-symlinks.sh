@@ -95,9 +95,10 @@ echo "==> Firefox customization (optional)"
 FIREFOX_PROFILE_DIR=$(find "$HOME/.mozilla/firefox" -maxdepth 1 -name "*.default-release" 2>/dev/null | head -n 1)
 if [ -n "$FIREFOX_PROFILE_DIR" ]; then
     create_symlink "$DOTFILES_DIR/firefox-chrome" "$FIREFOX_PROFILE_DIR/chrome" "firefox-chrome"
+    create_symlink "$DOTFILES_DIR/firefox-user.js" "$FIREFOX_PROFILE_DIR/user.js" "firefox-user.js"
 else
     echo "⚠️  Firefox profile not found. Skipping firefox-chrome."
-    echo "   To manually link: ln -s $DOTFILES_DIR/firefox-chrome ~/.mozilla/firefox/YOUR_PROFILE/chrome"
+    echo "   To manually link read the Firefox Troubleshooting section in the README.md"
 fi
 echo ""
 
