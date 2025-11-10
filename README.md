@@ -75,7 +75,7 @@ Note: `firefox-user.js` must be properly symlinked to `firefox-chrome` to modify
 Note: This assumes you're dotfiles exists under `~/.dotfiles`. Adjust the command accordingly.
 
 <details>
-  <summary>More information</summary>
+  <summary>More information on troubleshooting</summary>
   
   #### Enable userChrome customization in about:config
 
