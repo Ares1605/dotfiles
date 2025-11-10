@@ -146,6 +146,7 @@ smartmontools
 sof-firmware
 spotify-launcher
 starship
+superfile
 swaync
 swayosd
 swww
