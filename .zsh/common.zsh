@@ -37,6 +37,9 @@ alias nf="neofetch"
 alias hr="hyprctl reload"
 alias h="Hyprland"
 alias fn="cd ~/Documents/notes/ && nvim ./ && cd -"
+export hc="$HOME/.config/hypr"
+alias ls="eza"
+alias tree="tre"
 
 # Powerpill natively supports download parallelization
 #  More Information: https://wiki.archlinux.org/title/Powerpill
@@ -66,6 +69,27 @@ export LESS="-SRXF"
 eval "$(ssh-agent -s)" > /dev/null; ssh-add ~/.ssh/github_key 2>/dev/null
 
 eval "$(starship init zsh)"
+
+export PATH=$PATH:$HOME/.spicetify
+
+export NVM_DIR="$HOME/.nvm"
+# Add an explicit node version and add the --no-use flag to skip
+# a long operation (should reduce NVM sourcing from .4s to 0.07s).
+#
+#  More info: https://www.ioannispoulakas.com/2020/02/22/how-to-speed-up-shell-load-while-using-nvm/
+export PATH="$PATH:$HOME/.nvm/versions/node/v24.10.0/bin"
+lazy_load nvm 'source /usr/share/nvm/init-nvm.sh --no-use'
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+lazy_load pyenv 'eval "$(pyenv init - zsh)"'
+
+export PATH="$PATH:$HOME/.local/share/coursier/bin"
+
+# adding gem to path for ruby
+lazy_load gem 'export GEM_HOME="$(ruby -e '\''puts Gem.user_dir'\'')"; export PATH="$PATH:$GEM_HOME/bin"'
+
+lazy_load brew 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
 
 # ===== Dependency Tracking =====
 # Sync all dependencies
