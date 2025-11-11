@@ -1,7 +1,7 @@
 #!/bin/bash
 # Sync pip packages to requirements.txt
 
-DEPS_DIR="$HOME/.dotfiles/dependencies"
+DEPS_DIR="$DOTFILES_PATH/dependencies"
 
 echo "📦 Syncing pip packages..."
 pip list --format=freeze 2>/dev/null | grep -v "^-e " | sort > "$DEPS_DIR/requirements.txt"

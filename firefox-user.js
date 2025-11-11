@@ -5,6 +5,7 @@ user_pref("accessibility.typeaheadfind.flashBar", 0);
 user_pref("accessibility.uia.enable", 2);
 
 // General UX
+user_pref("browser.compactmode.show", true);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.contentblocking.category", "standard");
 user_pref("browser.fullscreen.autohide", false);

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Sync npm global packages to package.json
 
-DEPS_DIR="$HOME/.dotfiles/dependencies"
+DEPS_DIR="$DOTFILES_PATH/dependencies"
 
 echo "📦 Syncing npm global packages..."
 npm list -g --depth=0 --json 2>/dev/null | jq '{

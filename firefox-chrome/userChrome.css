@@ -56,10 +56,6 @@
     display: none !important;
 }
 
-#unified-extensions-button{
-	display: none !important;
-}
-
 #star-button-box {
 	display:none !important;
 }
@@ -587,3 +583,11 @@ browser[type="content"] {
 }
 
 /* ---- END: TRANSPARENCY RULES ---- */
+
+
+/*
+* Source: https://www.reddit.com/r/firefox/comments/1ezysa3/is_there_a_way_to_keep_my_bookmarks_bar_when_in/
+*/
+:root[sizemode="fullscreen"] {
+    & #PersonalToolbar { visibility: visible !important; }
+}

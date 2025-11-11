@@ -1,7 +1,7 @@
 #!/bin/bash
 # Sync Go binaries to go-packages.txt
 
-DEPS_DIR="$HOME/.dotfiles/dependencies"
+DEPS_DIR="$DOTFILES_PATH/dependencies"
 
 echo "📦 Syncing Go binaries..."
 if [ -d "$HOME/go/bin" ]; then

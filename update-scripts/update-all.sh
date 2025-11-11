@@ -17,7 +17,7 @@ echo ""
 echo ""
 
 echo ""
-echo "✅ All packages updated to ~/.dotfiles/dependencies/"
+echo "✅ All packages updated to $DOTFILES_PATH/dependencies/"
 
 echo "Updating wallpapers"
 echo ""
@@ -25,4 +25,4 @@ echo ""
 "$SCRIPT_DIR/update-wallpapers.sh"
 echo ""
 
-echo "✅ Updated wallpapers~/.dotfiles/wallpapers/"
+echo "✅ Updated wallpapers $DOTFILES_PATH/wallpapers/"

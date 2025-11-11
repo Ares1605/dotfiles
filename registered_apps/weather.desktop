@@ -2,7 +2,7 @@
 Type=Application
 Name=Weather
 Comment=Weather TUI in kitty
-Exec=/home/ares/.scripts/weather-launcher.sh
+Exec=zsh -c ". ~/.zshrc && $DOTFILES_PATH/scripts/weather-launcher.sh"
 TryExec=kitty
 Terminal=false
 Icon=kitty

@@ -12,7 +12,7 @@ lazy_load() {
 }
 
 # ===== Zsh Vi Mode Plugin =====
-source ~/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source $DOTFILES_DIR/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'

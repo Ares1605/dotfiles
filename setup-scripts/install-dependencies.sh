@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DEPS_DIR="$HOME/.dotfiles/dependencies"
+DEPS_DIR="$DOTFILES_PATH/dependencies"
 
 echo "🚀 Starting full system setup..."
 echo ""

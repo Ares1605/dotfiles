@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Bluetooth Manager
+GenericName=Bluetooth Manager
+Comment=Blue Manager TUI in kitty
+Exec=hyprctl dispatch exec "[float;size 800 550;center] kitty --class "bluetui" -e /usr/bin/env bluetui"
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility;
+StartupNotify=false
+Keywords=bluetui;bluetooth;manager;bluetooth manager;

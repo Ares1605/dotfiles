@@ -1,23 +1,19 @@
+## Setup
+Add the following to your .zshrc file:
+
+
+```bash
+export DOTFILES_PATH="[YOUR DOTFILES PATH]"
+```
+
+And change the `[YOUR DOTIFLES PATH]` where this repository points (ie. `$HOME/.dotfiles`).
+
 ## Dependencies
-`zsh`, `pacman`, `yay`
+`zsh`, `pacman`, `yay`, `git`
 
 ## Key Event Viewer
 
 Run `wev` in a terminal and press the keys you're interested in to capture the key codes.
-
-## Volume Control, Playback Control & Brightness
-
-We're using `swayosd-client` to adjust these configurations on the fly, using `swayosd-server` via `exec-once`.
-
-## Browser
-
-We use Firefox with a fairly minimal configuration. `firefox-chrome` should link the `chrome` folder in Firefox's profile directory (You can find `Profile Directory` in `about:support`). The path should be:
-
-```
-$HOME/.mozilla/firefox/qxaokg8k.default-release
-```
-
-This includes primarily transparency styling.
 
 ## Weather Configuration (wego)
 
@@ -65,8 +61,8 @@ If you still don't see styling and/or configuration (at the time of this commit 
 2. Under `Application Basics`, copy the value of `Profile Directory`. In most cases, the value exists as `/home/YOUR_USER/.mozilla/firefox/SOME_RELEASE_NUMBER.default-release`
 3. Execute the following in Kitty:
 ```bash
-ln -s ~/.dotfiles/firefox-chrome THE_DIRECTORY_YOUR_COPIED/chrome
-ln -s ~/.dotfiles/firefox-user.js THE_DIRECTORY_YOUR_COPIED/user.js
+ln -s $DOTFILES_PATH/firefox-chrome THE_DIRECTORY_YOUR_COPIED/chrome
+ln -s $DOTFILES_PATH/firefox-user.js THE_DIRECTORY_YOUR_COPIED/user.js
 ```
 The first `firefox-chrome` command should symlink your chrome directory to fix styling issues, and the second `firefox-user.js` command should symlink your configuration file.
 
@@ -87,3 +83,12 @@ Note: This assumes you're dotfiles exists under `~/.dotfiles`. Adjust the comman
 
 #### Recommended additional configurations
 Add the following extension to Firefox: [Ctrl+Number to switch tabs](https://addons.mozilla.org/en-US/firefox/addon/ctrl-number-to-switch-tabs/)
+
+
+## Local MySQL
+The `mysql` package is used for spinning up a local mysql instance. This uses the `mysqld.service` for initialization.
+
+To spin up a local server:
+```bash
+systemctl start mysqld
+```
