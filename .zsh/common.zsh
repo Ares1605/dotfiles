@@ -25,7 +25,7 @@ alias gd="git diff"
 alias gp="git push"
 alias gc="git commit"
 alias gb="git branch"
-alias gbc="git rev-parse --abbrev-ref HEAD | wl-copy"
+alias gbc="git rev-parse --abbrev-ref HEAD | tr -d '\n' | wl-copy"
 alias gch="git checkout"
 # TUI utility for git checkout when you forget the branch
 #   More information: https://til.jakelazaroff.com/fzf/make-a-tui-for-switching-and-deleting-git-branches/
@@ -40,6 +40,8 @@ alias fn="cd ~/Documents/notes/ && nvim ./ && cd -"
 export hc="$HOME/.config/hypr"
 alias ls="eza"
 alias tree="tre"
+# Claude CLI is not yet supported on Node version 25
+alias claude="nvm use 24 && claude"
 
 # Powerpill natively supports download parallelization
 #  More Information: https://wiki.archlinux.org/title/Powerpill

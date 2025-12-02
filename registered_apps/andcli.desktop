@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=AndCLI
+Comment=Authenticator CLI app
+Exec=zsh -c ". ~/.zshrc && $DOTFILES_PATH/scripts/andcli-launcher.sh"
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility;
+StartupNotify=false
+Keywords=andcli;authenticator;otp
