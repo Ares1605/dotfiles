@@ -102,7 +102,7 @@ Downloading `Destiny - Secure File Transfer` on iOS includes a simple client to 
 
 Here's a simple walkthrough example of transferring an image from an iOS phone to your desktop.
 
-+---------------------------+              +------------------------------+
+```+---------------------------+              +------------------------------+
 |           iPhone          |              |            Desktop           |
 +---------------------------+              +------------------------------+
 |                           |              |                              |
@@ -126,7 +126,7 @@ Here's a simple walkthrough example of transferring an image from an iOS phone t
 |                           |              | 6) File downloaded as        |
 |                           |              |    ./[filename]              |
 |                           |              |    (E2E transfer done)       |
-+---------------------------+              +------------------------------+
++---------------------------+              +------------------------------+```
 
 Take a look at `setup-scripts/setup-otp/entry.sh` for a working example of `wormhole-william`!
 
