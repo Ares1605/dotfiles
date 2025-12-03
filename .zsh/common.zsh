@@ -40,6 +40,8 @@ alias fn="cd ~/Documents/notes/ && nvim ./ && cd -"
 export hc="$HOME/.config/hypr"
 alias ls="eza"
 alias tree="tre"
+alias ssh="kitten ssh"
+
 # Claude CLI is not yet supported on Node version 25
 alias claude="nvm use 24 && claude"
 
