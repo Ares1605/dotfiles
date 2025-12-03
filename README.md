@@ -143,3 +143,18 @@ Google Authenticator app, do the following:
 5. After you've downloaded all the QR codes to your computer using the Destiny app via `entry.sh`, and typed your password, AndCLI will be properly setup, using the Authenticator app secrets in the `~/vault.kdbx`, protected by your password.
 
 Note: If you use something other than Google Authenticator, the script will likely not work, even if you export QR codes. Take a look at the `entry.sh` code to evaluate what needs to be modified to fit your app.
+
+## Toggl Track
+`toggl` (`toggl-cli-bin` in the AUR) is used to quickly mutate Toggl entries. Some common commands:
+
+```bash
+toggl start My Description
+```
+
+```bash
+toggl stop
+```
+
+```bash
+toggl list
+```
