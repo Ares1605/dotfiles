@@ -66,6 +66,7 @@ jdk17-openjdk
 jdk21-openjdk
 jless
 julia
+keepassxc
 kitty
 kvantum
 lazygit
@@ -131,9 +132,11 @@ slurp
 sof-firmware
 spotify-launcher
 starship
+steam
 sudo
 superfile
 swaync
+swayosd
 swww
 tectonic
 texlive-binextra
@@ -223,5 +226,6 @@ xdg-desktop-portal-wlr
 xorg-xdpyinfo
 xsel
 yasm
+zbar
 zip
 zsh
