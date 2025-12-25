@@ -31,6 +31,7 @@ dbeaver
 dialog
 discord
 docker
+docker-buildx
 docker-compose
 dolphin
 dosfstools
@@ -49,6 +50,7 @@ git-delta
 github-cli
 glow
 gnome-themes-extra
+gnuplot
 go
 graphicsmagick
 grim
@@ -116,7 +118,6 @@ php-apache
 pipewire-alsa
 pipewire-pulse
 python-colorthief
-python-modern-colorthief
 python-pip
 python-pipx
 python-pynvim
@@ -141,6 +142,7 @@ swww
 tectonic
 texlive-binextra
 tokei
+traceroute
 tree
 ttf-0xproto-nerd
 ttf-3270-nerd
@@ -213,6 +215,7 @@ waybar
 webkit2gtk
 weston
 wev
+wf-recorder
 wget
 wireshark-qt
 wl-clipboard
@@ -226,6 +229,7 @@ xdg-desktop-portal-wlr
 xorg-xdpyinfo
 xsel
 yasm
+yt-dlp
 zbar
 zip
 zsh

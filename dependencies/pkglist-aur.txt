@@ -7,7 +7,6 @@ colorz
 coursier-bin
 dislocker
 docker-scout
-floorp-bin
 gcalcli
 google-chrome
 leafpad
@@ -17,8 +16,11 @@ mycli
 neofetch
 ngrok
 nodejs-fast-cli
+opencode-bin
 powerpill
+python-modern-colorthief
 python-pywal16
+qdirstat-bin
 rbw-menu
 scala
 tofi
