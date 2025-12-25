@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 DEPS_DIR="$DOTFILES_PATH/dependencies"
 
@@ -47,6 +46,12 @@ if [ -f "$DEPS_DIR/go-packages.txt" ] && [ -s "$DEPS_DIR/go-packages.txt" ]; the
         go install "$pkg@latest"
     done < "$DEPS_DIR/go-packages.txt"
     echo "✓ Go binaries installed"
+fi
+
+if [ -f "$DEPS_DIR/shell-packages.sh" ] && [ -s "$DEPS_DIR/shell-packages.sh" ]; then
+    echo "Running shell packages..."
+    $($DEPS_DIR/shell-packages.sh)
+    echo "✓ Shell packages installed"
 fi
 
 echo ""

@@ -158,3 +158,11 @@ toggl stop
 ```bash
 toggl list
 ```
+
+## Wf-recorder
+Wf-recorder is a screen capture CLI that offers audio and video screen capture, with define ranges. Wf-recorder is used for the `Screen Capture` application.
+Use the `Screen Capture` application to invoke the `scripts/screen-capture-launcher.sh` script, which will capture the screen from the range you provide it.
+
+This is useful to quickly screen capturing without the mental and physical overhead of using OBS.
+
+Note: Waybar will show a red ⏺ when a wf-recorder process is running (via `pgrep -x wf-recorder`)!

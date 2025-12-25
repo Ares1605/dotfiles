@@ -9,6 +9,10 @@
   font-family: "CodeNewRoman Nerd Font Propo";
 }
 
+#custom-recording {
+    color: #e6746c; /* red for the recording icon */
+}
+
 window#waybar {
   all: unset;
 }

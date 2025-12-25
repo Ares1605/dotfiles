@@ -14,6 +14,15 @@
     window-background: argb:33000000;
 }
 
+
+// I don't even know what this does, but it sped up rofi by
+// .01s
+configuration {
+    modi: "drun";
+    drun-use-desktop-cache: true;
+    drun-match-fields: "name,generic,exec";
+}
+
 window {
     location:   center;
     width:      480;

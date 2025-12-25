@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Screen Capture
+GenericName=Screen Capture
+Comment=Capture a range on the screen
+Exec=zsh -c ". ~/.zshrc && $DOTFILES_PATH/scripts/screen-capture-launcher.sh"
+TryExec=kitty
+Terminal=false
+Icon=kitty
+Categories=Utility;
+StartupNotify=false
+Keywords=record;range;screencapture

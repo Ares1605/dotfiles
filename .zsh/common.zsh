@@ -42,8 +42,9 @@ alias ls="eza"
 alias tree="tre"
 alias ssh="kitten ssh"
 
-# Claude CLI is not yet supported on Node version 25
-alias claude="nvm use 24 && claude"
+
+# Replace gross Claude CLI with opencode
+alias claude="opencode"
 
 # Powerpill natively supports download parallelization
 #  More Information: https://wiki.archlinux.org/title/Powerpill
