@@ -13,6 +13,7 @@ leafpad
 microsoft-edge-stable-bin
 minecraft-launcher
 mycli
+nchat
 neofetch
 ngrok
 nodejs-fast-cli
@@ -23,6 +24,7 @@ python-pywal16
 qdirstat-bin
 rbw-menu
 scala
+sqlit
 tofi
 toggl-cli-bin
 tre-command
