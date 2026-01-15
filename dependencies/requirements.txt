@@ -83,7 +83,6 @@ meson==1.10.0
 modern_colorthief==0.1.7
 more-itertools==10.8.0
 msgpack==1.1.2
-mycli==1.42.0
 nftables==0.1
 numpy==2.4.0
 oauth2client==4.1.3
