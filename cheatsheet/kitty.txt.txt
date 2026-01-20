@@ -1,0 +1,1 @@
+Copy URL from terminal: ctrl+shift+y

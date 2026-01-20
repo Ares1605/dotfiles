@@ -92,6 +92,8 @@ alias cat="bat"
 alias ocat="/usr/bin/cat"
 
 alias bios="systemctl reboot --firmware-setup"
+alias cheat="$DOTFILES_DIR/cheatsheet/viewer.sh"
+alias cheat-add="$DOTFILES_DIR/cheatsheet/adder.sh"
 
 export c="$HOME/.config"
 export nc="$HOME/.config/nvim"
