@@ -20,7 +20,6 @@ nodejs-fast-cli
 opencode-bin
 powerpill
 python-modern-colorthief
-python-pywal16
 qdirstat-bin
 rbw-menu
 scala

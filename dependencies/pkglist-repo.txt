@@ -121,6 +121,7 @@ python-colorthief
 python-pip
 python-pipx
 python-pynvim
+python-pywal
 qt5ct
 qt6ct
 rbw
