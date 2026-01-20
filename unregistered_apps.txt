@@ -4,4 +4,6 @@ electron35.desktop
 electron36.desktop
 electron37.desktop
 electron38.desktop
-
+cmake-gui.desktop
+avahi-discover.desktop
+org.keepassxc.KeePassXC.desktop

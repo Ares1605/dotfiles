@@ -84,13 +84,8 @@ alias reset-colors="kitty @ set-colors -a \
 # Replace gross Claude CLI with opencode
 alias claude="opencode"
 
-# Powerpill natively supports download parallelization
-#  More Information: https://wiki.archlinux.org/title/Powerpill
-alias powerpill="pacman"
-PACMAN="powerpill"
-
-alias i="sudo $PACMAN -S"
-alias is="$PACMAN -Ss"
+alias i="sudo pacman -S"
+alias is="pacman -Ss"
 
 alias c="wl-copy"
 alias cat="bat"

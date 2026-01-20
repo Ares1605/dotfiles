@@ -73,6 +73,7 @@ kitty
 kvantum
 lazygit
 less
+libreoffice-still
 linux
 linux-firmware
 llvm
@@ -114,7 +115,6 @@ otf-overpass-nerd
 percona-server
 perf
 php
-php-apache
 pipewire-alsa
 pipewire-pulse
 python-colorthief

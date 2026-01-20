@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Start Apache
-Comment=Start Apache2.0 server
-Exec=sudo /opt/lampp/lampp startapache
-Icon=kitty
-Terminal=false
-Categories=Utility;
-StartupNotify=false
