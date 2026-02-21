@@ -12,7 +12,7 @@ if [ "$cheatsheets" = "*" ]; then
   exit 0
 fi
 
-base_target=$(echo "$cheatsheets" | fzf --no-sort)
+base_target=$(echo "$cheatsheets" | fzf --no-sort --height ~100%)
 if [ $? -ne 0 ]; then
   exit 0
 fi

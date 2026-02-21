@@ -70,6 +70,10 @@ Note: `firefox-user.js` must be properly symlinked to `firefox-chrome` to modify
 
 Note: This assumes you're dotfiles exists under `~/.dotfiles`. Adjust the command accordingly.
 
+Note: `browser.cache.memory.capacity` (41297 - (41606 / (1 + ((RAM / 1.16) ^ 0.75))), assuming RAM=16GB) may not be set from user.js, you may have to set it
+yourself on `about:config`, use [these](https://wiki.archlinux.org/title/Firefox/Tweaks#Turn_off_the_disk_cache) directions for reference
+
+
 <details>
   <summary>More information on troubleshooting</summary>
   
@@ -166,3 +170,6 @@ Use the `Screen Capture` application to invoke the `scripts/screen-capture-launc
 This is useful to quickly screen capturing without the mental and physical overhead of using OBS.
 
 Note: Waybar will show a red ⏺ when a wf-recorder process is running (via `pgrep -x wf-recorder`)!
+
+## QDirStat
+Use QDirStat GUI to observe file system usage across the computer

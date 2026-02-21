@@ -1,0 +1,11 @@
+kew is a simple audio TUI
+mpv is a great backend for video and music streaming, at which you can programatically communicate with it through IPC
+
+-----------------------
+yt-dlp -f "ba[acodec=opus]/ba" --remux-video webm \
+  --embed-metadata --add-metadata \
+  -o "%(title)s - %(artist,creator,channel)s [%(id)s].%(ext)s" \
+  --yes-playlist "https://music.youtube.com/playlist?list=PL1oaP5o8WOhTE7fPZtUWiCLr9ch6QzuG2"
+
+Is a good command for download playlists from youtube
+-----------------------

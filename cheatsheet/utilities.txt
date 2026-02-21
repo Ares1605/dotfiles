@@ -1,0 +1,3 @@
+wiremix - Manage input/output devices and program playback volume through this TUI
+tuitube - Download youtube videos easily through this TUI
+kew - A simple but good music player TUI

@@ -1,0 +1,5 @@
+MyCLI:
+  * Connect to a DB with mycli --login-path=[login-name]
+  * Add a DB connection with mysql_config_editor set --login-path=my_server_alias --host=my.host.address --user=myusername --password
+SQLit:
+  Another, more involved, but simple TUI

@@ -1,3 +1,5 @@
+source /home/ares/.cache/wal/colors.sh
+
 export DOTFILES_DIR="$HOME/.dotfiles"
 
 lazy_load() {
@@ -27,9 +29,10 @@ alias gc="git commit"
 alias gb="git branch"
 alias gbc="git rev-parse --abbrev-ref HEAD | tr -d '\n' | wl-copy"
 alias gch="git checkout"
+alias cfn="aws cloudformation"
 # TUI utility for git checkout when you forget the branch
 #   More information: https://til.jakelazaroff.com/fzf/make-a-tui-for-switching-and-deleting-git-branches/
-alias gcht="git branch | fzf --preview 'git log -p main..{-1} --color=always {-1}' | cut -c 3- | xargs git checkout"
+alias gcht="git branch | fzf --preview 'git log -p main..{-1} --color=always {-1}' --height ~100% | cut -c 3- | xargs git checkout"
 alias venv="source .venv/bin/activate"
 alias szc="source $HOME/.zshrc"
 alias sv="source .venv/bin/activate"
@@ -83,6 +86,7 @@ alias reset-colors="kitty @ set-colors -a \
 
 # Replace gross Claude CLI with opencode
 alias claude="opencode"
+alias ask="opencode --agent ask --model openai/gpt-5.2-codex"
 
 alias i="sudo pacman -S"
 alias is="pacman -Ss"
@@ -94,6 +98,7 @@ alias ocat="/usr/bin/cat"
 alias bios="systemctl reboot --firmware-setup"
 alias cheat="$DOTFILES_DIR/cheatsheet/viewer.sh"
 alias cheat-add="$DOTFILES_DIR/cheatsheet/adder.sh"
+alias md="$DOTFILES_DIR/scripts/render-md.sh"
 
 export c="$HOME/.config"
 export nc="$HOME/.config/nvim"
@@ -122,7 +127,7 @@ lazy_load nvm 'source /usr/share/nvm/init-nvm.sh --no-use'
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-lazy_load pyenv 'eval "$(pyenv init - zsh)"'
+eval "$(pyenv init - zsh)"
 
 export PATH="$PATH:$HOME/.local/share/coursier/bin"
 

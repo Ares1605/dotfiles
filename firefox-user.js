@@ -39,6 +39,10 @@ user_pref("privacy.trackingprotection.allow_list.hasMigratedCategoryPrefs", true
 // Downloads (sanitized path)
 user_pref("browser.download.lastDir", "~/Downloads");
 user_pref("browser.download.panel.shown", true);
+// user_pref("browser.cache.disk.enable", "false");
+// user_pref("browser.cache.memory.enable", "true");
+// // 41297 - (41606 / (1 + ((RAM / 1.16) ^ 0.75))), assuming RAM=16GB
+// user_pref("browser.cache.memory.capacity", "36197");
 
 // PDF & accessibility
 user_pref("pdfjs.enableAltText", true);

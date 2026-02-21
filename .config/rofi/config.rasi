@@ -5,7 +5,6 @@
 
 * {
     font:   "FiraCode Nerd Font Medium 12";
-    background-color: transparent;
 
     margin:     0;
     padding:    0;
@@ -23,9 +22,12 @@ configuration {
     drun-match-fields: "name,generic,exec";
 }
 
+#window {
+    padding: 0;
+}
 window {
     location:   center;
-    width:      480;
+    width:      550;
     border-radius: 4px;
 }
 
@@ -39,8 +41,8 @@ prompt, entry, element-icon, element-text {
 }
 
 listview {
-    padding:    4px 0;
-    lines:      8;
+    padding:    3px 0;
+    lines:      9;
     columns:    1;
 
     fixed-height:   false;
@@ -49,7 +51,7 @@ listview {
 element {
     padding:    8px;
     spacing:    8px;
-    border-radius: 4px;
+    border-radius: 1px;
 }
 
 element-icon {
@@ -59,6 +61,5 @@ element-icon {
 element-text {
     text-color: inherit;
     padding: 5px;
-    border-radius: 4px;
-    background-color: transparent;
+    border-radius: 2px;
 }

@@ -15,13 +15,13 @@ else
   fzf_input=$(printf "%s\n%s" "$cheatsheets" "$add_cheatsheet_str")
 fi
 
-choice=$(echo "$fzf_input" | fzf --no-sort)
+choice=$(echo "$fzf_input" | fzf --no-sort --height ~100%)
 if [ $? -ne 0 ]; then
   exit 0
 fi
 if [ "$choice" = "$add_cheatsheet_str" ]; then
   read -p "Enter cheatsheet name: " name
-  base_target="$name.txt"
+  base_target="$name"
 else
   base_target="$choice"
 fi

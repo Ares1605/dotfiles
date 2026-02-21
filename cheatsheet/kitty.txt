@@ -1,0 +1,10 @@
+Copy URL from terminal: ctrl+shift+y
+
+Window management:
+ ctrl+shift+enter new_window
+ ctrl+shift+] Adjust focused window forward
+ ctrl+shift+[ Adjust focused window backward
+ ctrl+shift+m Move focused window to window ahead of itself
+ ctrl+shift+b Move focused window to window ahead of itself
+ ctrl+shift+w Close window
+
