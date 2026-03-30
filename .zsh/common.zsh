@@ -19,6 +19,7 @@ source $DOTFILES_DIR/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+alias t="toggl"
 alias n="nvim"
 alias v="vim"
 alias gs="git status"
@@ -144,6 +145,8 @@ alias sync-npm="$DOTFILES_DIR/setup-scripts/sync-npm.sh"
 alias sync-pip="$DOTFILES_DIR/setup-scripts/sync-pip.sh"
 alias sync-go="$DOTFILES_DIR/setup-scripts/sync-go.sh"
 # ===============================
+
+alias yay='env PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin yay'
 
 # ===== Zsh Vi Mode Configuration =====
 # Change cursor shape for different vi modes

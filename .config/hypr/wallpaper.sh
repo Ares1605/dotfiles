@@ -82,7 +82,7 @@ wall_path="${wall_dir}/${wall_selection}"
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1
-swww img "$wall_path" --transition-type any --transition-fps 60 --transition-duration .5
+awww img "$wall_path" --transition-type any --transition-fps 60 --transition-duration .5
 
 if ! wal --backend "wal" -i "$wall_path" -n; then
     echo "Error: Failed to generate colors with wal"
