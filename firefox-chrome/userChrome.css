@@ -145,16 +145,6 @@
 	--tab-shadow-max-size: 0 !important;
 }
 
-.tab-background {
-	border-radius: var(--tab-border-radius);
-	border-bottom-left-radius: 0 !important;
-	border-bottom-right-radius: 0 !important;
-	margin-block: 0 !important;
-	border: 0 !important;
-	position: relative !important;
-	--uc-tab-corner-bg: transparent;
-}
-
 /* Rounded bottom corners */
 .tab-background::before,
 .tab-background::after {
@@ -571,19 +561,6 @@ toolbarbutton[part="scrollbutton-down"] {
     background-color: rgba(30, 30, 30, 0.5) !important;
     opacity: 0.8 !important;
 }
-
-/* Make browser content area transparent - this allows wallpaper to show through */
-#tabbrowser-tabpanels {
-  background-color: transparent !important;
-}
-
-browser[type="content-primary"],
-browser[type="content"] {
-  background-color: transparent !important;
-}
-
-/* ---- END: TRANSPARENCY RULES ---- */
-
 
 /*
 * Source: https://www.reddit.com/r/firefox/comments/1ezysa3/is_there_a_way_to_keep_my_bookmarks_bar_when_in/

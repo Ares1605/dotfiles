@@ -43,6 +43,7 @@ alias h="Hyprland"
 alias fn="cd ~/Documents/notes/ && nvim ./ && cd -"
 export hc="$HOME/.config/hypr"
 alias ls="eza"
+alias df="duf"
 alias tree="tre"
 alias ssh="kitten ssh"
 alias light-colors="kitty @ set-colors -a \
@@ -85,9 +86,8 @@ alias reset-colors="kitty @ set-colors -a \
     color15=#c0caf5"
 
 
-# Replace gross Claude CLI with opencode
-alias claude="opencode"
-alias ask="opencode --agent ask --model openai/gpt-5.2-codex"
+alias oc="opencode"
+alias ask="opencode --agent ask --model openai/openai/gpt-5.4"
 
 alias i="sudo pacman -S"
 alias is="pacman -Ss"
@@ -152,8 +152,7 @@ alias yay='env PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin yay'
 # Change cursor shape for different vi modes
 ZVM_CURSOR_STYLE_ENABLED=true
 
-# Use nvim as external editor (press 'vv' in normal mode to edit command in nvim)
-export EDITOR='nvim'
+export EDITOR='vim'
 
 # Hook function to fix fzf key bindings after zsh-vi-mode loads
 function zvm_after_init() {

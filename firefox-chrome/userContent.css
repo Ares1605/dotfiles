@@ -1,38 +1,4 @@
 /*
  * userContent.css - Page content styling
  */
-
-/* Give ALL pages a default background (so they're not transparent) */
-@-moz-document regexp(".*") {
-  html {
-    backdrop-filter: blur(12px);
-  }
-}
-
-/* Make ONLY Firefox home/new tab page transparent */
-@-moz-document url("about:home"), url("about:newtab") {
-  :root {
-    --newtab-background-color: transparent !important;
-    --newtab-background-color-secondary: transparent !important;
-  }
-
-  html, body {
-    background-color: rgba(255, 255, 255, 1) !important;
-    background-image: none !important;
-    background: transparent !important;
-  }
-
-  /* All wrapper divs transparent */
-  body > * {
-    background-color: transparent !important;
-  }
-
-  /* Make top sites semi-transparent */
-  .top-sites-list {
-    background-color: transparent !important;
-  }
-
-  .top-site-outer .tile {
-    background-color: rgba(50, 50, 50, 0.5) !important;
-  }
-}
+/* body { background: white; }  */

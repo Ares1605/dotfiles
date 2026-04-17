@@ -13,6 +13,7 @@ $all\
 $character"""
 
 add_newline = false
+scan_timeout = 200
 
 [username]
 show_always = true

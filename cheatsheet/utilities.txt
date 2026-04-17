@@ -1,8 +1,8 @@
 wiremix - Manage input/output devices and program playback volume through this TUI
 tuitube - Download youtube videos easily through this TUI
 kew - A simple but good music player TUI
-hyprmon - A simple TUI for monitor management
-teams-for-linux - Microsoft Teams for Linux
+hyprmoncfg - A simple TUI for monitor management
+tldr - A simpler `man`
 
 Get IP geolocation -
   curl ipinfo.io/[ip address]
