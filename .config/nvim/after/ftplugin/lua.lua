@@ -1,0 +1,3 @@
+-- This is where we specify lua specific file options,
+-- determined by the filename (lua.lua for Lua files, php.lua for PHP files, etc.)
+vim.opt_local.shiftwidth = 4
