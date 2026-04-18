@@ -1,10 +1,8 @@
 return {
     {
 	"folke/which-key.nvim",
-	lazy = false,
+	event = "VeryLazy",
+	lazy = true,
 	opts = {},
-	keys = {
-	    {"<leader>"}
-	}
     }
 }
