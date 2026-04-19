@@ -10,6 +10,17 @@ vim.opt.wrap = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.keymap.set("n", "<C-S-j>", function()
+    vim.cmd('normal! j')
+    vim.cmd('normal! zz')
+end)
+vim.keymap.set("n", "<C-S-k>", function()
+    vim.cmd('normal! k')
+    vim.cmd('normal! zz')
+end)
+
+vim.keymap.set("n", "<C-d>", "15j", { desc = "Page down" })
+vim.keymap.set("n", "<C-u>", "15k", { desc = "Page up" })
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move left" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move down" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move up" })
@@ -20,6 +31,18 @@ vim.keymap.set("n", "<leader>w", "<cmd>set wrap!<cr>", { desc = "Toggle text wra
 
 vim.keymap.set("n", "<leader>c", "<cmd>bdelete<cr>", { desc = "Close buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Go to previous buffer" })
+
+vim.keymap.set("n", "]e", function()
+    vim.diagnostic.jump({ count=1 })
+end, { desc = "Go to next error" })
+vim.keymap.set("n", "[e", function()
+    vim.diagnostic.jump({ count=-1 })
+end, { desc = "Go to previous error" })
+vim.keymap.set("n", "gl", function()
+    vim.diagnostic.open_float()
+end, { desc = "View diagnostic message" })
+
+vim.keymap.set("n", "<leader>a", "<cmd>AerialNavToggle<cr>", { desc = "Toggle Aerial code outlining" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking text",
@@ -32,3 +55,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 require("config.lazy")
 
 vim.lsp.enable("lua_ls")
+vim.lsp.enable("intelephense")
+vim.lsp.enable("vtsls")
