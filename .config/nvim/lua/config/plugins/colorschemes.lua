@@ -118,17 +118,7 @@ return {
     lazy = false
   },
   {
-    "gustavoprietop/doom-themes.nvim",
-    priority = 1000,
-    lazy = false,
-  },
-  {
     "AlessandroYorba/Alduin",
-    priority = 1000,
-    lazy = false
-  },
-  {
-    "neanias/everforest-nvim",
     priority = 1000,
     lazy = false
   },

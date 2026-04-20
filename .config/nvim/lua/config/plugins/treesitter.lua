@@ -5,7 +5,6 @@ local languages = {
     "python",
     "javascript",
     "bash",
-    "typescript",
     "html",
     "scss",
     "css",
@@ -24,7 +23,7 @@ local languages = {
     "toml",
     "yaml",
     "latex",
-    "tsx",
+    "typescript",
     "typst",
     "vue",
     "zsh",
@@ -48,32 +47,32 @@ end
 
 return {
     {
-	"nvim-treesitter/nvim-treesitter",
-	branch = "main",
-	lazy = false,
-	build = ":TSUpdate",
-	config = function()
-	    local ok, treesitter = pcall(require, "nvim-treesitter")
-	    if ok and type(treesitter.install) == "function" then
-		treesitter.install(languages)
-	    end
+        "nvim-treesitter/nvim-treesitter",
+        branch = "main",
+        lazy = false,
+        build = ":TSUpdate",
+        config = function()
+            local ok, treesitter = pcall(require, "nvim-treesitter")
+            if ok and type(treesitter.install) == "function" then
+                treesitter.install(languages)
+            end
 
-	    vim.api.nvim_create_autocmd("FileType", {
-		group = vim.api.nvim_create_augroup("treesitter-start", { clear = true }),
-		callback = function(event)
-		    local filetype = vim.bo[event.buf].filetype
-		    local language = vim.treesitter.language.get_lang(filetype) or filetype
+            vim.api.nvim_create_autocmd("FileType", {
+                group = vim.api.nvim_create_augroup("treesitter-start", { clear = true }),
+                callback = function(event)
+                    local filetype = vim.bo[event.buf].filetype
+                    local language = vim.treesitter.language.get_lang(filetype) or filetype
 
-		    if not installed_languages[language] or should_disable_highlight(event.buf) then
-			return
-		    end
+                    if not installed_languages[language] or should_disable_highlight(event.buf) then
+                        return
+                    end
 
-		    local ok = pcall(vim.treesitter.start, event.buf, language)
-		    if ok then
-			vim.bo[event.buf].syntax = "ON"
-		    end
-		end,
-	    })
-	end,
+                    local ok = pcall(vim.treesitter.start, event.buf, language)
+                    if ok then
+                        vim.bo[event.buf].syntax = "ON"
+                    end
+                end,
+            })
+        end,
     },
 }

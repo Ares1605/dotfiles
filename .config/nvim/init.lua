@@ -26,6 +26,9 @@ vim.o.showmode = false
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.o.title = true
+
+vim.o.titlestring = "nvim " .. vim.fs.basename(vim.fn.getcwd())
 
 -- IDK What sign column is..
 vim.o.signcolumn = 'yes'
@@ -98,8 +101,6 @@ vim.keymap.set("n", "gl", function()
   vim.diagnostic.open_float()
 end, { desc = "View diagnostic message" })
 
-vim.keymap.set("n", "<leader>a", "<cmd>AerialNavToggle<cr>", { desc = "Toggle Aerial code outlining" })
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -126,11 +127,18 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 require("config.lazy")
 
+require("snacks").words.enable()
+
 vim.cmd("colorscheme slate")
 
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("intelephense")
 vim.lsp.enable("vtsls")
 
+vim.o.expandtab = true
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
+
 -- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+-- vim: ts=4 sts=4 sw=4 et
