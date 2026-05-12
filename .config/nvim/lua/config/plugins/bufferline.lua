@@ -79,6 +79,12 @@ return {
         keys = {
             { "[b", function() require("bufferline").cycle(-1) end, { desc = "Move left" } },
             { "]b", function() require("bufferline").cycle(1) end, { desc = "Move right" } },
+            { "<leader>c",
+                function()
+                    local bufferline = require("bufferline")
+                    bufferline.unpin_and_close()
+                end
+            },
             { "<leader>bc", function() require("bufferline").close_others() end, { desc = "Close all other buffers" } },
             { "<leader>bC", function()
                 require("bufferline").close_others()

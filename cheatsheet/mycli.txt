@@ -1,0 +1,10 @@
+Documentation:
+	https://www.mycli.net/
+
+To create a new login path:
+	$ mysql_config_editor set --login-path=my_server_alias --host=my.host.address --user=myusername --password
+	Enter password: *****
+
+To connect to a preexisting login path:
+	mycli --login-path=[login path]
+

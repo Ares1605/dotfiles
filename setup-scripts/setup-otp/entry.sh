@@ -42,9 +42,6 @@ echo
 echo "Completed gathering $otps_sum_count accounts!"
 echo
 
-echo $otps_sum
-exit 0
-
 read -s -p "Create a password for the vault: " password
 
 cd $SCRIPT_DIR

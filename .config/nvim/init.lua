@@ -69,17 +69,17 @@ vim.o.timeoutlen = 300
 -- Enable undo/redo changes even after closing and reopening a file
 vim.o.undofile = true
 
-vim.keymap.set("n", "<C-S-j>", function()
+vim.keymap.set("n", "<Down>", function()
   vim.cmd('normal! j')
   vim.cmd('normal! zz')
 end)
-vim.keymap.set("n", "<C-S-k>", function()
+vim.keymap.set("n", "<Up>", function()
   vim.cmd('normal! k')
   vim.cmd('normal! zz')
 end)
 
-vim.keymap.set("n", "<C-d>", "15j", { desc = "Page down" })
-vim.keymap.set("n", "<C-u>", "15k", { desc = "Page up" })
+vim.keymap.set("n", "<PageDown>", "15j", { desc = "Page down" })
+vim.keymap.set("n", "<PageUp>", "15k", { desc = "Page up" })
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move left" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move down" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move up" })
@@ -88,7 +88,6 @@ vim.keymap.set("n", "<C-s>", "<cmd>w<cr>", { desc = "Save file" })
 vim.keymap.set("i", "<C-s>", "<cmd>w<cr><ESC>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>w", "<cmd>set wrap!<cr>", { desc = "Toggle text wrapping" })
 
-vim.keymap.set("n", "<leader>c", "<cmd>bdelete<cr>", { desc = "Close buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Go to previous buffer" })
 
 vim.keymap.set("n", "]e", function()
@@ -111,7 +110,7 @@ vim.keymap.set("n", "<S-k>", function()
 end)
 
 vim.diagnostic.config({
-  float = {
+float = {
     border = "rounded", -- Options: "none", "single", "double", "rounded", "solid", "shadow"
     header = "",        -- Removes the "Diagnostics:" header for a cleaner look
   },

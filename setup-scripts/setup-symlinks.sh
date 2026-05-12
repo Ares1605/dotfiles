@@ -76,6 +76,7 @@ create_symlink "$DOTFILES_DIR/.config/ranger" "$HOME/.config/ranger" "ranger"
 create_symlink "$DOTFILES_DIR/.config/lazysql" "$HOME/.config/lazysql" "lazysql"
 create_symlink "$DOTFILES_DIR/.config/clock-rs" "$HOME/.config/clock-rs" "clock-rs"
 create_symlink "$DOTFILES_DIR/.config/starship.toml" "$HOME/.config/starship.toml" "starship.toml"
+create_symlink "$DOTFILES_DIR/.config/opencode" "$HOME/.config/opencode" "opencode"
 echo ""
 
 # Scripts directory
