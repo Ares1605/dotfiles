@@ -1,7 +1,3 @@
-source /home/ares/.cache/wal/colors.sh
-
-export DOTFILES_DIR="$HOME/.dotfiles"
-
 lazy_load() {
     local cmd="$1"
     local init_cmd="$2"
@@ -13,8 +9,24 @@ lazy_load() {
     }"
 }
 
+if [[ $IS_MAC -ne 1 ]]; then
+ source /home/ares/.cache/wal/colors.sh
+
+ export COPY=/usr/bin/wl-copy
+
+ lazy_load brew 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
+else # Is MacOS
+ export COPY=/usr/bin/pbcopy
+
+ lazy_load brew 'eval "$(/opt/homebrew/bin/brew shellenv)"'
+fi
+
+export DOTFILES_DIR=$DOTFILES_PATH
+
 # ===== Zsh Vi Mode Plugin =====
-source $DOTFILES_DIR/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+if [[ $IS_MAC -ne 1 ]]; then
+ source $DOTFILES_DIR/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+fi
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -28,7 +40,7 @@ alias gd="git diff"
 alias gp="git push"
 alias gc="git commit"
 alias gb="git branch"
-alias gbc="git rev-parse --abbrev-ref HEAD | tr -d '\n' | wl-copy"
+alias gbc="git rev-parse --abbrev-ref HEAD | tr -d '\n' | $COPY"
 alias gch="git checkout"
 alias cfn="aws cloudformation"
 # TUI utility for git checkout when you forget the branch
@@ -92,7 +104,7 @@ alias ask="opencode --agent ask --model openai/openai/gpt-5.4"
 alias i="sudo pacman -S"
 alias is="pacman -Ss"
 
-alias c="wl-copy"
+alias c=$COPY
 alias cat="bat"
 alias ocat="/usr/bin/cat"
 
@@ -134,8 +146,6 @@ export PATH="$PATH:$HOME/.local/share/coursier/bin"
 
 # adding gem to path for ruby
 lazy_load gem 'export GEM_HOME="$(ruby -e '\''puts Gem.user_dir'\'')"; export PATH="$PATH:$GEM_HOME/bin"'
-
-lazy_load brew 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
 
 # ===== Dependency Tracking =====
 # Sync all dependencies
