@@ -38,11 +38,13 @@ alias gs="git status"
 alias gl="git pull"
 alias gd="git diff"
 alias gp="git push"
+alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD | tr -d "\n")'
 alias gc="git commit"
 alias gb="git branch"
 alias gbc="git rev-parse --abbrev-ref HEAD | tr -d '\n' | $COPY"
 alias gch="git checkout"
 alias cfn="aws cloudformation"
+alias tfm="terraform"
 # TUI utility for git checkout when you forget the branch
 #   More information: https://til.jakelazaroff.com/fzf/make-a-tui-for-switching-and-deleting-git-branches/
 alias gcht="git branch | fzf --preview 'git log -p main..{-1} --color=always {-1}' --height ~100% | cut -c 3- | xargs git checkout"
@@ -126,7 +128,7 @@ export LESS="-SRXF"
 # add github agent
 eval "$(ssh-agent -s)" > /dev/null; ssh-add ~/.ssh/github_key 2>/dev/null
 
-eval "$(starship init zsh)"
+# [[ -z "$STARSHIP_SHELL" ]] && eval "$(starship init zsh)"
 
 export PATH=$PATH:$HOME/.spicetify
 

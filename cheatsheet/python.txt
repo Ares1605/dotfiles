@@ -1,0 +1,21 @@
+The * in the function signature means everything after it is keyword-only arguments.
+def from_wire_dict(d: Dict[str, Any], *, role: str | None = None):
+    ...
+What this means in practice
+# ✅ Must use the keyword
+from_wire_dict(some_dict, role="user")
+# ❌ Cannot pass it positionally
+from_wire_dict(some_dict, "user")  # TypeError
+Why it's useful
+ - Readability at call sites — forces callers to be explicit about what they're passing
+ - Future-proof — you can add more keyword-only args later without breaking positional argument order
+ - Prevents bugs — no accidentally swapping argument positions
+
+## Locking
+Python does not sequential consistency promises without locking.
+
+Furthermore, Python does not have any native CAS operations (atomics library is an option).
+
+Python also does not have an idea of a "volatile" keyword like in Java. To get sequential consistency,
+you must also get atomicity via lock mechanisms. Python gives the guarantee that a lock acquisition would
+serve as a memory synchronization point between N threads

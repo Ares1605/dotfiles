@@ -82,7 +82,9 @@ return {
             { "<leader>c",
                 function()
                     local bufferline = require("bufferline")
-                    bufferline.unpin_and_close()
+                    local current = vim.api.nvim_get_current_buf()
+                    bufferline.cycle(-1)
+                    bufferline.unpin_and_close(current)
                 end
             },
             { "<leader>bc", function() require("bufferline").close_others() end, { desc = "Close all other buffers" } },

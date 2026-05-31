@@ -10,6 +10,7 @@
         "rg": "allow",
         "read": "allow",
         "read_file": "allow",
+        "todowrite": "allow",
         "task": {
             "explore": "allow"
         }

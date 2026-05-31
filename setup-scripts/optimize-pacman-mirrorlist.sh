@@ -23,4 +23,10 @@ else
 fi
 
 # Now overwrite the mirrorlist with optimized mirrors
-sudo reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector \
+  --protocol https \
+  --age 24 \
+  --completion-percent 100 \
+  --latest 30 \
+  --sort score \
+  --save /etc/pacman.d/mirrorlist

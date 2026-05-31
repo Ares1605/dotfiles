@@ -206,13 +206,27 @@ return {
                 ignored = true,
             }) end, desc = "Open file explorer" },
             { "<leader>uC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
-            { "<leader>ff", function() require("snacks").picker.files() end, desc = "Find file" },
+            { "<leader>ff", function() require("snacks").picker.files({
+                hidden = true,
+                ignored = true,
+                exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
+            }) end, desc = "Find file" },
             { "<leader>fF", function() require("snacks").picker.files({
-                cwd = "~"
+                cwd = "~",
+                hidden = true,
+                ignored = true,
+                exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
             }) end, desc = "Global Find file" },
-            { "<leader>fw", function() require("snacks").picker.grep() end, desc = "Live grep" },
+            { "<leader>fw", function() require("snacks").picker.grep({
+                hidden = true,
+                ignored = true,
+                exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
+            }) end, desc = "Live grep" },
             { "<leader>fW", function() require("snacks").picker.grep({
-                cwd = "~"
+                cwd = "~",
+                hidden = true,
+                ignored = true,
+                exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
             }) end, desc = "Global Live grep" },
             { "<leader>fb", function() require("snacks").picker.buffers() end, desc = "Buffers" },
             { "<leader>lr", function() require("snacks").picker.lsp_references() end, desc = "Search LSP references" },
