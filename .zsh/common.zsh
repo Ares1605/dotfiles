@@ -128,7 +128,9 @@ export LESS="-SRXF"
 # add github agent
 eval "$(ssh-agent -s)" > /dev/null; ssh-add ~/.ssh/github_key 2>/dev/null
 
-# [[ -z "$STARSHIP_SHELL" ]] && eval "$(starship init zsh)"
+if [[ $DISABLE_STARSHIP != "true" ]]; then
+    [[ -z "$STARSHIP_SHELL" ]] && eval "$(starship init zsh)"
+fi
 
 export PATH=$PATH:$HOME/.spicetify
 
