@@ -212,21 +212,17 @@ return {
                 exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
             }) end, desc = "Find file" },
             { "<leader>fF", function() require("snacks").picker.files({
-                cwd = "~",
                 hidden = true,
-                ignored = true,
-                exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
+                ignored = true
             }) end, desc = "Global Find file" },
             { "<leader>fw", function() require("snacks").picker.grep({
                 hidden = true,
                 ignored = true,
-                exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
+                exclude = {".git", ".claude", ".phpunit.cache", ".venv", ".venv-*", "venv", "venv-*", "node_modules"}
             }) end, desc = "Live grep" },
             { "<leader>fW", function() require("snacks").picker.grep({
-                cwd = "~",
                 hidden = true,
-                ignored = true,
-                exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
+                ignored = true
             }) end, desc = "Global Live grep" },
             { "<leader>fb", function() require("snacks").picker.buffers() end, desc = "Buffers" },
             { "<leader>lr", function() require("snacks").picker.lsp_references() end, desc = "Search LSP references" },
