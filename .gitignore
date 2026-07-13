@@ -1,5 +1,7 @@
 .config/kitty/current-theme.conf
 .config/hypr/wallpaper-hyprland-custom.conf
+# Since it stores state under .config
+.config/opencode/opencode-notifier-state.json
 
 # wego config contains API keys
 .wegorc

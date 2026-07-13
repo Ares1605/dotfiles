@@ -40,6 +40,7 @@ alias gd="git diff"
 alias gp="git push"
 alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD | tr -d "\n")'
 alias gc="git commit"
+alias ga="git add"
 alias gb="git branch"
 alias gbc="git rev-parse --abbrev-ref HEAD | tr -d '\n' | $COPY"
 alias gch="git checkout"
@@ -102,6 +103,7 @@ alias reset-colors="kitty @ set-colors -a \
 
 alias oc="opencode"
 alias ask="opencode --agent ask --model openai/openai/gpt-5.4"
+alias awsc="eval \$(\"$DOTFILES_DIR/scripts/choose-aws-profile.sh\")"
 
 alias i="sudo pacman -S"
 alias is="pacman -Ss"
