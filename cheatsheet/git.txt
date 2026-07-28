@@ -1,0 +1,6 @@
+To run a workflow:
+  gh workflow run [workflow].yaml \
+    --ref [branch name] \
+    -f my-var=my-custom-value
+
+  *CAVEAT*: This will *only* work if the [workflow].yaml exists in the default (main/master) branch. If it does not, even if it exists in [branch name], it will not be runnable. If it does exist in the default branch, Github will run it from the [branch name] (--ref [branch name]). Weird...

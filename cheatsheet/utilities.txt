@@ -8,3 +8,6 @@ Get IP geolocation -
   curl ipinfo.io/[ip address]
 Get my IP -
   curl ipinfo.io/ip
+
+Fancy diff -
+  diff -u <source> <target> | delta --line-numbers

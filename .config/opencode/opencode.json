@@ -3,6 +3,7 @@
     "permission": {
         "*": "ask",
         "bash": "allow",
+        "webfetch": "allow",
         "edit": "ask",
         "glob": "allow",
         "grep": "allow",
