@@ -21,7 +21,7 @@
             "mode": "primary",
             "prompt": "{file:./prompts/investigator.txt}",
             "tools": {
-                "edit": true,
+                "edit": false,
                 "bash": true
             }
         },

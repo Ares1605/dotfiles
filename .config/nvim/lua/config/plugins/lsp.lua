@@ -55,6 +55,10 @@ return {
                     hostInfo = "neovim"
                 }
             }
+            vim.lsp.config["gopls"] = {
+                cmd = { "gopls" },
+                filetypes = { "go", "gomod", "gowork", "gotmpl" },
+            }
             vim.lsp.config["lua_ls"] = {
                 -- Command and arguments to start the server.
                 cmd = { "lua-language-server" },

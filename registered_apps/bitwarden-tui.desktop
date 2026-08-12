@@ -3,7 +3,7 @@ Name=Bitwarden TUI
 GenericName=Password Manager
 Comment=A secure and free TUI password manager for all of your devices.
 # Use sh -c to correctly interpret the pipe '|'
-Exec=sh -c 'rbw-menu password | wl-copy'
+Exec=hyprctl dispatch exec "[float;size 500 500;top] kitty -o close_on_child_death=yes -o font_size=14 --class rbw-menu -e sh -c 'RBW_MENU_COMMAND=fzf rbw-menu password | wl-copy'"
 Terminal=false
 MimeType=x-scheme-handler/bitwarden
 Type=Application
