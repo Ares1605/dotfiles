@@ -220,6 +220,7 @@ return {
                 exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
             }) end, desc = "Find file" },
             { "<leader>fF", function() require("snacks").picker.files({
+                cwd = vim.env.PWD,
                 hidden = true,
                 ignored = true
             }) end, desc = "Global Find file" },
@@ -229,6 +230,7 @@ return {
                 exclude = {".git", ".claude", ".phpunit.cache", ".venv", ".venv-*", "venv", "venv-*", "node_modules"}
             }) end, desc = "Live grep" },
             { "<leader>fW", function() require("snacks").picker.grep({
+                cwd = vim.env.PWD,
                 hidden = true,
                 ignored = true
             }) end, desc = "Global Live grep" },
