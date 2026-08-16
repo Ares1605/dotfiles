@@ -136,6 +136,7 @@ vim.lsp.enable("intelephense")
 vim.lsp.enable("vtsls")
 vim.lsp.enable("basedpyright")
 vim.lsp.enable("terraformls")
+vim.lsp.enable('gh_actions_ls')
 
 vim.o.expandtab = true
 vim.o.tabstop = 4

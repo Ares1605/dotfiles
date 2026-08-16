@@ -83,6 +83,10 @@ return {
                 filetypes = { "terraform", "terraform-vars" },
                 root_markers = { ".terraform", ".git" }
             }
+            vim.lsp.config["gh_actions_ls"] = {
+                cmd = { "gh-actions-language-server", "--stdio" },
+                filetypes = { "yaml" }
+            }
             vim.lsp.config["basedpyright"] = {
                 cmd = { "basedpyright-langserver", "--stdio" },
                 filetypes = { "python" },
