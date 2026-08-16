@@ -194,6 +194,14 @@ return {
                                 }
                             },
                         },
+                        actions = {
+                            explorer_focus = function(picker)
+                                vim.api.nvim_set_current_dir(picker:dir())
+                            end,
+                            explorer_up = function(picker)
+                                vim.api.nvim_set_current_dir(vim.fs.dirname(picker:cwd()))
+                            end
+                        }
                     }
                 }
             },
