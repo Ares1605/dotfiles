@@ -107,6 +107,11 @@ return {
             },
             picker = {
                 sources = {
+                    lazygit = {
+                        -- your lazygit configuration comes here
+                        -- or leave it empty to use the default settings
+                        -- refer to the configuration section below
+                    },
                     explorer = {
                         layout = {
                             hidden = { "input" },
@@ -238,6 +243,7 @@ return {
             { "<leader>lr", function() require("snacks").picker.lsp_references() end, desc = "Search LSP references" },
             { "<leader>li", function() require("snacks").picker.lsp_implementations() end, desc = "Search LSP references" },
             { "<leader>ls", function() require("snacks").picker.lsp_symbols() end, desc = "Search LSP references" },
+            { "<leader>g", function() require("snacks").lazygit.log() end, desc = "Open Git log" },
             { "gd", function() require("snacks").picker.lsp_definitions() end, desc = "Search LSP definitions" },
             { "[w", function() require("snacks").words.jump(-1, false) end, desc = "Move LSP reference left under cursor" },
             { "]w", function() require("snacks").words.jump(1, false) end, desc = "Move LSP reference right under cursor" },

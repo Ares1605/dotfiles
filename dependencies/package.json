@@ -5,15 +5,15 @@
   "dependencies": {
     "@anthropic-ai/claude-code": "*",
     "@google/gemini-cli": "*",
-    "@openai/codex": "*",
+    "@mermaid-js/mermaid-cli": "*",
+    "@vtsls/language-server": "*",
     "asciify-image": "*",
-    "fast-cli": "*",
     "image-to-ascii-cli": "*",
+    "intelephense": "*",
     "neovim": "*",
     "node-gyp": "*",
-    "nopt": "*",
-    "puppeteer": "*",
-    "semver": "*",
-    "svelte-language-server": "*"
+    "pyright": "*",
+    "svelte-language-server": "*",
+    "gh-actions-language-server": "*"
   }
 }

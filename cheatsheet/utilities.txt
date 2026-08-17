@@ -11,3 +11,6 @@ Get my IP -
 
 Fancy diff -
   diff -u <source> <target> | delta --line-numbers
+
+Grep highlight -
+  echo "1\n2\n3" | grep -E "2|$"

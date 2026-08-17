@@ -1,0 +1,12 @@
+# Keybindings.
+# Each binding can be a single key or a list of keys; see
+# https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Custom_Keybindings.md
+# for the syntax.
+keybinding:
+  universal:
+    prevPage: u
+    nextPage: d
+    scrollLeft: h
+    scrollRight: l
+    prevBlock: [<left>, H, <backtab>]
+    nextBlock: [<right>, L, <tab>]
