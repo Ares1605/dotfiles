@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=MySQL Workbench
+Comment=MySQL Workbench
+Exec=/usr/sbin/mysql-workbench
+Icon=kitty
+Terminal=false
+Categories=Utility;
+StartupNotify=false
