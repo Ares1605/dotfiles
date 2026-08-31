@@ -50,6 +50,6 @@ return {
 
                 vim.api.nvim_set_current_win(prefocused_win)
             end)
-        end, desc = "Open a Git blame pane" }
+        end, desc = "Toggle Git blame pane" }
     }
 }
