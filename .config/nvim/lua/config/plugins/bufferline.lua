@@ -91,7 +91,10 @@ return {
             { "<leader>bC", function()
                 require("bufferline").close_others()
                 vim.cmd("bdelete")
-            end, { desc = "Close all other buffers" } }
+            end, { desc = "Close all other buffers" } },
+            { "<leader>bp", function()
+                vim.cmd.buffer("#")
+            end, { desc = "Go to previous buffer" } },
         }
     }
 }

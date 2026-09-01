@@ -88,8 +88,6 @@ vim.keymap.set("n", "<C-s>", "<cmd>w<cr>", { desc = "Save file" })
 vim.keymap.set("i", "<C-s>", "<cmd>w<cr><ESC>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>w", "<cmd>set wrap!<cr>", { desc = "Toggle text wrapping" })
 
-vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Go to previous buffer" })
-
 vim.keymap.set("n", "]e", function()
   vim.diagnostic.jump({ count=1 })
 end, { desc = "Go to next error" })
@@ -128,7 +126,7 @@ require("config.lazy")
 
 require("snacks").words.enable()
 
-vim.cmd("colorscheme slate")
+vim.cmd("colorscheme habamax")
 
 vim.lsp.enable("gopls")
 vim.lsp.enable("lua_ls")

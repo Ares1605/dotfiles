@@ -219,22 +219,22 @@ return {
                 ignored = true,
             }) end, desc = "Open file explorer" },
             { "<leader>uC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
-            { "<leader>ff", function() require("snacks").picker.files({
+            { "ff", function() require("snacks").picker.files({
                 hidden = true,
                 ignored = false,
                 exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
             }) end, desc = "Find file" },
-            { "<leader>fF", function() require("snacks").picker.files({
+            { "fF", function() require("snacks").picker.files({
                 cwd = vim.env.PWD,
                 hidden = true,
                 ignored = true
             }) end, desc = "Global Find file" },
-            { "<leader>fw", function() require("snacks").picker.grep({
+            { "fw", function() require("snacks").picker.grep({
                 hidden = true,
                 ignored = false,
                 exclude = {".git", ".claude", ".phpunit.cache", ".venv", ".venv-*", "venv", "venv-*", "node_modules"}
             }) end, desc = "Live grep" },
-            { "<leader>fW", function() require("snacks").picker.grep({
+            { "fW", function() require("snacks").picker.grep({
                 cwd = vim.env.PWD,
                 hidden = true,
                 ignored = true
