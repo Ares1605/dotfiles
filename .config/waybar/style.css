@@ -15,24 +15,23 @@
 
 window#waybar {
   all: unset;
+  background: alpha(@background, .3);
 }
 
 /* Common block styling (simulates a shared “variable”) */
 .modules-left,
 .modules-center,
 .modules-right {
-  padding: 3px;
-  border-radius: 5px;
-  background: alpha(@background, .6);
+  padding: 2px;
 }
 .modules-center {
   padding-right: 10px;
   padding-left: 10px;
 }
 
-.modules-left   { margin: 5px 0px 2px 10px; }
-.modules-center { margin: 5px 0px 2px 0px;  }
-.modules-right  { margin: 5px 10px 2px 0px; }
+.modules-left   { margin: 3px 0px 2px 10px; }
+.modules-center { margin: 3px 0px 2px 0px;  }
+.modules-right  { margin: 3px 10px 2px 0px; }
 
 tooltip {
   background: @background;
@@ -127,8 +126,14 @@ tooltip {
 }
 
 /* Tray menu */
-#tray menu * { padding: 0px 5px; transition: all .3s ease; }
-#tray menu separator { padding: 0px 5px; transition: all .3s ease; }
+#tray menu * {
+    padding: 0px 5px;
+    transition: all .3s ease;
+}
+#tray menu separator {
+    padding: 0px 5px;
+    transition: all .3s ease;
+}
 
 /* Optional: tiny text shadow touch */
 #custom-endpoint {
