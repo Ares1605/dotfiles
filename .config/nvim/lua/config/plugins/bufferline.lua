@@ -77,8 +77,16 @@ return {
             })
         end,
         keys = {
-            { "[b", function() require("bufferline").cycle(-1) end, { desc = "Move left" } },
-            { "]b", function() require("bufferline").cycle(1) end, { desc = "Move right" } },
+            { "[b", function()
+                for _ = 1, vim.v.count1 do
+                    require("bufferline").cycle(-1)
+                end
+            end, { desc = "Move left" } },
+            { "]b", function()
+                for _ = 1, vim.v.count1 do
+                    require("bufferline").cycle(1)
+                end
+            end, { desc = "Move left" } },
             { "<leader>c",
                 function()
                     local bufferline = require("bufferline")

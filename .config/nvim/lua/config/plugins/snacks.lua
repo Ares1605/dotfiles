@@ -1,15 +1,12 @@
-local confirm = function(self)
-    local before = vim.api.nvim_list_bufs()
-    self:action("confirm")()
-    local after = vim.api.nvim_list_bufs()
-
-    if table.concat(before) ~= table.concat(after) and self.meta["is_maximized"] then
-        self:action("toggle_maximize")()
-    end
-end
 local toggleMaximize = function(self)
     self.meta["is_maximized"] = self.meta["is_maximized"] ~= true
     self:action("toggle_maximize")()
+end
+local confirm = function(self)
+    self:action("confirm")()
+    if self.meta["is_maximized"] then
+        toggleMaximize(self)
+    end
 end
 
 return {
