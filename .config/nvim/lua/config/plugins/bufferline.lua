@@ -91,7 +91,7 @@ return {
                 function()
                     local bufferline = require("bufferline")
                     local current = vim.api.nvim_get_current_buf()
-                    bufferline.cycle(-1)
+                    vim.cmd.buffer("#")
                     bufferline.unpin_and_close(current)
                 end
             },
