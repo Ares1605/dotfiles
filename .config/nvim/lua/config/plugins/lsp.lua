@@ -80,7 +80,7 @@ return {
             }
             vim.lsp.config["terraformls"] = {
                 cmd = { "terraform-ls", "serve" },
-                filetypes = { "terraform", "terraform-vars" },
+                filetypes = { "terraform", "terraform-vars", "tf", "tfvars" },
                 root_markers = { ".terraform", ".git" }
             }
             vim.lsp.config["gh_actions_ls"] = {
