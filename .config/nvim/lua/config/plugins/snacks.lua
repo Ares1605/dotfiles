@@ -219,22 +219,34 @@ return {
             { "ff", function() require("snacks").picker.files({
                 hidden = true,
                 ignored = false,
-                exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"}
+                exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"},
+                layout = {
+                    fullscreen = true
+                }
             }) end, desc = "Find file" },
             { "fF", function() require("snacks").picker.files({
                 cwd = vim.env.PWD,
                 hidden = true,
-                ignored = true
+                ignored = true,
+                layout = {
+                    fullscreen = true
+                }
             }) end, desc = "Global Find file" },
             { "fw", function() require("snacks").picker.grep({
                 hidden = true,
                 ignored = false,
-                exclude = {".git", ".claude", ".phpunit.cache", ".venv", ".venv-*", "venv", "venv-*", "node_modules"}
+                exclude = {".git", ".claude", ".phpunit.cache", ".venv", ".venv-*", "venv", "venv-*", "node_modules"},
+                layout = {
+                    fullscreen = true
+                }
             }) end, desc = "Live grep" },
             { "fW", function() require("snacks").picker.grep({
                 cwd = vim.env.PWD,
                 hidden = true,
-                ignored = true
+                ignored = true,
+                layout = {
+                    fullscreen = true
+                }
             }) end, desc = "Global Live grep" },
             { "<leader>fb", function() require("snacks").picker.buffers() end, desc = "Buffers" },
             { "<leader>lr", function() require("snacks").picker.lsp_references() end, desc = "Search LSP references" },
