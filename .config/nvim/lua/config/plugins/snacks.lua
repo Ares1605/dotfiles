@@ -122,7 +122,7 @@ return {
                                     ["q"] = "cancel",
                                     ["s"] = confirm,
                                     ["<2-LeftMouse>"] = confirm,
-                                    ["f"] = toggleMaximize,
+                                    ["F"] = toggleMaximize,
                                     ["h"] = false,
                                     ["<M-w>"] = false,
                                     ["<C-s>"] = false,
@@ -224,14 +224,27 @@ return {
                     fullscreen = true
                 }
             }) end, desc = "Find file" },
+            { "fc", function()
+                local directory = vim.fn.expand('%:p:.:h')
+                require("snacks").picker.files({
+                    cwd = directory,
+                    hidden = true,
+                    ignored = false,
+                    exclude = {".venv", ".venv-*", "venv", "venv-*", "node_modules"},
+                    layout = {
+                        fullscreen = true
+                    },
+                    title = directory
+                })
+            end, desc = "Find file in current file buffers directory" },
             { "fF", function() require("snacks").picker.files({
-                cwd = vim.env.PWD,
-                hidden = true,
-                ignored = true,
-                layout = {
-                    fullscreen = true
-                }
-            }) end, desc = "Global Find file" },
+                    cwd = vim.env.PWD,
+                    hidden = true,
+                    ignored = true,
+                    layout = {
+                        fullscreen = true
+                    }
+                }) end, desc = "Global Find file" },
             { "fw", function() require("snacks").picker.grep({
                 hidden = true,
                 ignored = false,
