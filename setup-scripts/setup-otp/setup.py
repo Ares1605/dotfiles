@@ -6,7 +6,7 @@ from urllib.parse import urlparse, parse_qs
 
 # Read OTP URIs from command line argument
 password = sys.argv[1]
-otpauths = sys.argv[2].split()
+otpauths = sys.argv[2].split("\n")
 
 # Create new database
 vault_path = os.path.expanduser('~/vault.kdbx')
