@@ -10,11 +10,6 @@ return {
         end,
     },
     {
-        "Shatur/neovim-ayu",
-        lazy = false,
-        priority = 1000
-    },
-    {
         "jacoborus/tender.vim",
         lazy = false,
         priority = 1000
@@ -25,10 +20,6 @@ return {
         priority = 1000,
     },
     {
-        "catppuccin/nvim",
-        lazy = false,
-        priority = 1000
-    }, {
         "mipmip/vim-petra",
         lazy = false,
         priority = 1000
@@ -69,11 +60,6 @@ return {
         lazy = false
     },
     {
-        'coffee-theme/coffee.vim',
-        priority = 1000,
-        lazy=false
-    },
-    {
         "doums/espresso.nvim",
         priority = 1000,
         lazy = false
@@ -95,11 +81,6 @@ return {
     },
     {
         "aktersnurra/no-clown-fiesta.nvim",
-        priority = 1000,
-        lazy = false
-    },
-    {
-        "nyoom-engineering/oxocarbon.nvim",
         priority = 1000,
         lazy = false
     },

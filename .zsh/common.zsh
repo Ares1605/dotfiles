@@ -46,6 +46,7 @@ alias gbc="git rev-parse --abbrev-ref HEAD | tr -d '\n' | $COPY"
 alias gch="git checkout"
 alias cfn="aws cloudformation"
 alias tfm="terraform"
+alias asl="aws sso login"
 # TUI utility for git checkout when you forget the branch
 #   More information: https://til.jakelazaroff.com/fzf/make-a-tui-for-switching-and-deleting-git-branches/
 alias gcht="git branch | fzf --preview 'git log -p main..{-1} --color=always {-1}' --height ~100% | cut -c 3- | xargs git checkout"

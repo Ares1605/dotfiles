@@ -87,6 +87,11 @@ return {
                 cmd = { "gh-actions-language-server", "--stdio" },
                 filetypes = { "yaml" }
             }
+            vim.lsp.config["just"] = {
+                cmd = { "just-lsp" },
+                filetypes = { "just" },
+                root_markers = { ".git" }
+            }
             vim.lsp.config["bashls"] = {
                 cmd = { "bash-language-server", "start" },
                 filetypes = { "bash", "sh" },

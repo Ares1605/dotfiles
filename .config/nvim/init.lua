@@ -6,7 +6,7 @@ vim.opt.clipboard="unnamedplus"
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
+vim.schedule(function() vim.o.clipboard = "unnamedplus" end)
 
 vim.opt.number = true
 vim.opt.shiftwidth = 4
@@ -21,7 +21,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 vim.g.have_nerd_font = true
-vim.o.mouse = 'a' -- Enable mouse support for all modes
+vim.o.mouse = "a" -- Enable mouse support for all modes
 vim.o.showmode = false
 
 vim.o.ignorecase = true
@@ -31,7 +31,7 @@ vim.o.title = true
 vim.o.titlestring = "nvim " .. vim.fs.basename(vim.fn.getcwd())
 
 -- IDK What sign column is..
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = "yes"
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -61,7 +61,7 @@ vim.o.confirm = true
 --   See `:help lua-options`
 --   and `:help lua-guide-options`
 vim.o.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Decrease mapped sequence wait time
 vim.o.timeoutlen = 300
@@ -70,12 +70,12 @@ vim.o.timeoutlen = 300
 vim.o.undofile = true
 
 vim.keymap.set("n", "<Down>", function()
-  vim.cmd('normal! j')
-  vim.cmd('normal! zz')
+  vim.cmd("normal! j")
+  vim.cmd("normal! zz")
 end)
 vim.keymap.set("n", "<Up>", function()
-  vim.cmd('normal! k')
-  vim.cmd('normal! zz')
+  vim.cmd("normal! k")
+  vim.cmd("normal! zz")
 end)
 
 vim.keymap.set("n", "<PageDown>", "15j", { desc = "Page down" })
@@ -100,12 +100,15 @@ end, { desc = "View diagnostic message" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<S-k>", function()
   vim.lsp.buf.hover({
     border = "rounded",
   })
 end)
+vim.keymap.set("n", "<leader>lR", function()
+    vim.lsp.buf.rename()
+end, { desc = "Rename LSP variable" })
 
 vim.diagnostic.config({
 float = {
@@ -136,6 +139,7 @@ vim.lsp.enable("basedpyright")
 vim.lsp.enable("terraformls")
 vim.lsp.enable("gh_actions_ls")
 vim.lsp.enable("bashls")
+vim.lsp.enable("just")
 
 vim.o.expandtab = true
 vim.o.tabstop = 4

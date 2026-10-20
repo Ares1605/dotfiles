@@ -261,7 +261,7 @@ return {
                     fullscreen = true
                 }
             }) end, desc = "Global Live grep" },
-            { "<leader>fb", function() require("snacks").picker.buffers() end, desc = "Buffers" },
+            { "fb", function() require("snacks").picker.buffers() end, desc = "Buffers" },
             { "<leader>lr", function() require("snacks").picker.lsp_references() end, desc = "Search LSP references" },
             { "<leader>li", function() require("snacks").picker.lsp_implementations() end, desc = "Search LSP references" },
             { "<leader>ls", function() require("snacks").picker.lsp_symbols() end, desc = "Search LSP references" },
