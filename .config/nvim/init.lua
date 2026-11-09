@@ -125,6 +125,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+require("signature_help")
 require("config.lazy")
 
 local theme = require('last-color').recall() or 'default'
