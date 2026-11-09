@@ -127,9 +127,79 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 require("config.lazy")
 
+local theme = require('last-color').recall() or 'default'
+vim.cmd.colorscheme(theme)
+
 require("snacks").words.enable()
 
-vim.cmd("colorscheme habamax")
+vim.keymap.set("n", "<leader>C", function()
+    local mode = {
+        DARK = "dark",
+        LIGHT = "light",
+    }
+
+    local previous_color = vim.g.colors_name
+    local previous_background = vim.o.background
+
+    local function generate_colorscheme(name, colorscheme, mode)
+        return {
+            text = name,
+            mode = mode,
+            value = colorscheme,
+        }
+    end
+
+    Snacks.picker.pick({
+        items = {
+            generate_colorscheme("Melange", "melange", mode.DARK),
+            generate_colorscheme("Ubaryd", "ubaryd", mode.DARK),
+            generate_colorscheme("Retrobox", "retrobox", mode.DARK),
+            generate_colorscheme("Ashen", "ashen", mode.DARK),
+            generate_colorscheme("Gruvbox Baby", "gruvbox-baby", mode.DARK),
+        },
+        focus = "list",
+        layout = {
+            hidden = { "preview" },
+            layout = {
+                backdrop = false,
+                row = 1,
+                col = -1,
+                width = 30,
+                height = 10,
+                border = "none",
+                box = "vertical",
+                { win = "input", height = 1, border = false, title = "{title} {live} {flags}", title_pos = "center" },
+                { win = "list", border = "hpad" },
+                { win = "preview", title = "{preview}", border = true },
+            },
+        },
+        title = "Colorscheme picker",
+
+        format = function(item, picker)
+            return {
+                { item.text, "SnacksLabel" },
+                {  " (" .. item.mode .. ")", "SnacksComment" },
+            }
+        end,
+
+        on_change = function(picker, item)
+            vim.cmd.colorscheme(item.value)
+            vim.opt.background = item.mode
+        end,
+
+        on_close = function(picker)
+            vim.cmd.colorscheme(previous_color)
+            vim.opt.background = previous_background
+        end,
+
+        confirm = function(picker, item)
+            picker:close()
+
+            vim.cmd.colorscheme(item.value)
+            vim.opt.background = item.mode
+        end,
+    })
+end, { desc = "Pick colorscheme" })
 
 vim.lsp.enable("gopls")
 vim.lsp.enable("lua_ls")

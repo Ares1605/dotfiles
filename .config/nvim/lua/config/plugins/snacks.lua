@@ -9,6 +9,15 @@ local confirm = function(self)
     end
 end
 
+local toggle_file_explorer = function()
+    require("snacks").explorer({
+        follow_file = true,
+        watch = true,
+        hidden = true,
+        ignored = true,
+    })
+end
+
 return {
     {
         "folke/snacks.nvim",
@@ -209,12 +218,7 @@ return {
             },
         },
         keys = {
-            { "<leader>e", function() require("snacks").explorer({
-                follow_file = true,
-                watch = true,
-                hidden = true,
-                ignored = true,
-            }) end, desc = "Open file explorer" },
+            { "<leader>e", toggle_file_explorer, desc = "Toggle file explorer" },
             { "<leader>uC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
             { "ff", function() require("snacks").picker.files({
                 hidden = true,

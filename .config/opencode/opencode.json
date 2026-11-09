@@ -12,7 +12,7 @@
         { "action": "read", "resource": "*", "effect": "allow" },
         { "action": "read_file", "resource": "*", "effect": "allow" },
         { "action": "todowrite", "resource": "*", "effect": "allow" },
-        { "action": "execute", "resource": "*", "effect": "allow" },
+        { "action": "execute", "resource": "*", "effect": "ask" },
         { "action": "grafana_*", "resource": "*", "effect": "allow" },
         { "action": "subagent", "resource": "explore", "effect": "allow" }
     ],
